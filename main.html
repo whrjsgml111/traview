@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="./assets/css/style.css?2110260127" />
+<title>TRAVIEW</title>
+</head>
+<body>
+	<div class="wrap">
+		<!-- header -->
+		<div class="header">
+			<div class="logo">
+				<img src="./assets/images/traview.png" alt="logo">
+			</div>
+			<!-- SAFE -->
+			<!-- <div class="login_box safe">
+				<div class="status">SAFE</div>
+				<p>현재 홍길동 고객님의 네트워크는 <span>안전</span>하게 보호되고 있습니다.</p>
+				<div class="my_icon"></div>
+			</div> -->
+			<!-- NOTICE -->
+			<div class="login_box notice">
+				<div class="status">Notice</div>
+				<p>현재 홍길동 고객님의 네트워크는 <span>주의</span>가 필요한 상태입니다.</p>
+				<div class="my_icon"></div>
+			</div>
+			<!-- DANGER -->
+			<!-- <div class="login_box danger">
+				<div class="status">Danger</div>
+				<p>현재 홍길동 고객님의 네트워크는 <span>위협</span>으로부터 <span>취약</span>한 상태입니다.</p>
+				<div class="my_icon"></div>
+			</div> -->
+		</div>
+		<!-- right top menu -->
+		<ul class="profile_menu">
+			<li class="pf_info">계정정보</li>
+			<li class="inquiry">유료문의</li>
+			<li class="logout">로그아웃</li>
+		</ul>
+		<!-- left menu -->
+		<div class="left_menu">
+			<div class="menu_icon"></div>
+			<ul>
+				<li class="dashboard on">
+					<a href="./main.html">
+						<div class="icon"></div>
+						<span>대시보드</span>
+					</a>
+				</li>
+				<li class="security">
+					<a href="./sub_01.html">
+						<div class="icon"></div>
+						<span>보안 위협 탐지</span>
+					</a>
+				</li>
+				<li class="network sub">
+					<a href="javascript:;">
+						<div class="icon"></div>
+						<span>Network 운영 현황</span>
+					</a>
+					<div class="child_box">
+						<a href="./sub_02.html" class="sub_title">- Network 운영 현황</a>
+						<a href="./sub_02_1.html" class="sub_title">- 그룹 관리</a>
+						<a href="./sub_02_2.html" class="sub_title">- 보안 설정</a>
+					</div>
+				</li>
+				<li class="report">
+					<a href="./sub_03.html">
+						<div class="icon"></div>
+						<span>보고서</span>
+					</a>
+				</li>
+				<li class="setting sub">
+					<a href="javascript:;">
+						<div class="icon"></div>
+						<span>시스템 관리</span>
+					</a>
+					<div class="child_box">
+						<a href="./sub_04.html" class="sub_title">- 계정 관리</a>
+						<a href="./sub_04_1.html" class="sub_title">- 감사 로그</a>
+					</div>
+				</li>
+			</ul>
+			<div class="line"></div>
+		</div>
+		<!-- main -->
+		<div class="main_container">
+			<div class="top">
+				<!-- Traffic -->
+				<div class="traffic">
+					<!-- SAFE -->
+					<!-- <div class="status_msg safe">
+						<img src="./assets/images/safe.png" alt="safe"><br>
+						현재 홍길동 고객님의<br>
+						네트워크는 <span>안전</span>하게<br>
+						보호되고 있습니다.
+					</div> -->
+					<!-- NOTICE -->
+					<div class="status_msg notice">
+						<img src="./assets/images/notice.png" alt="notice"><br>
+						현재 홍길동 고객님의<br>
+						네트워크는 <span>주의</span>가 필요합니다.<br>
+						보안 설정으로 네트워크를<br>
+						안전하게 보호하세요.
+					</div>
+					<!-- DANGER -->
+					<!-- <div class="status_msg danger">
+						<img src="./assets/images/danger.png" alt="danger"><br>
+						현재 홍길동 고객님의<br>
+						네트워크는 <span>위협</span>으로부터<br>
+						취약한 상태입니다.<br>
+						보안 설정을 통해 네트워크를<br>
+						안전하게 보호하세요.
+					</div> -->
+					<div class="total total_view_1">
+						<h3>Total <span>Inbound Traffic</span></h3>
+						<p>2020.08.08 ~ 2021.08.08</p>
+						<strong><span class="count_up">127</span>GB</strong>
+					</div>
+					<div class="total total_view_2">
+						<h3>Total <span>Outbound Traffic</span></h3>
+						<p>2020.08.08 ~ 2021.08.08</p>
+						<strong><span class="count_up">88</span>GB</strong>
+					</div>
+					<div class="total total_view_3">
+						<h3>Total <span>Over Traffic</span></h3>
+						<p>2020.08.08 ~ 2021.08.08</p>
+						<strong>
+							<span class="count_up gray">63</span><b class="gray">건</b>
+							<span class="gray">/</span>
+							<span class="count_up">40</span><b>건</b>
+						</strong>
+					</div>
+				</div>
+				<!-- 위협통신 관리 현황 -->
+				<div class="cs_wrap">
+					<div class="title">
+						<h2>위협통신 관리 현황</h2>
+						<a href="./sub_02_2.html" class="link">+ 상세 설정 바로가기</a>
+					</div>
+					<div class="drag_box">
+						<div class="box type_1">
+							<div class="t_b">
+								<span></span>악성통신
+								<div class="toggle_box check_all">
+									<input id="toggle_1" name="type_s1" type="checkbox" checked onclick='selectAll(this, "type_s1")'/>
+									<label class="toggle-item" for="toggle_1"></label>
+								</div>
+							</div>
+							<ul id="sortableType1">
+								<li>
+									<h3>봇넷 통신</h3>
+									<p>
+										<span>전체 IP : 32개 / 관리 IP : 12개</span>
+										<span>탐지건수 : 12건</span>
+									</p>
+									<div class="bar"></div>
+									<div class="toggle_box child">
+										<input id="toggle_1_1" name="type_s1" type="checkbox" checked/>
+										<label class="toggle-item" for="toggle_1_1"></label>
+									</div>
+								</li>
+								<li>
+									<h3>C&C 통신</h3>
+									<p>
+										<span>전체 IP : 32개 / 관리 IP : 12개</span>
+										<span>탐지건수 : 12건</span>
+									</p>
+									<div class="bar"></div>
+									<div class="toggle_box child">
+										<input id="toggle_1_2" name="type_s1" type="checkbox" checked/>
+										<label class="toggle-item" for="toggle_1_2"></label>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="box type_2">
+							<div class="t_b">
+								<span></span>악성 의심 통신
+								<div class="toggle_box">
+									<input id="toggle_2" name="type_s2" type="checkbox" checked onclick='selectAll(this, "type_s2")'/>
+									<label class="toggle-item" for="toggle_2"></label>
+								</div>
+							</div>
+							<ul id="sortableType2">
+								<li>
+									<h3>SQL 인젝션</h3>
+									<p>
+										<span>전체 IP : 32개 / 관리 IP : 12개</span>
+										<span>탐지건수 : 12건</span>
+									</p>
+									<div class="bar"></div>
+									<div class="toggle_box child">
+										<input id="toggle_2_1" name="type_s2" type="checkbox" checked/>
+										<label class="toggle-item" for="toggle_2_1"></label>
+									</div>
+								</li>
+								<li>
+									<h3>SOCK Proxy</h3>
+									<p>
+										<span>전체 IP : 32개 / 관리 IP : 12개</span>
+										<span>탐지건수 : 12건</span>
+									</p>
+									<div class="bar"></div>
+									<div class="toggle_box child">
+										<input id="toggle_2_2" name="type_s2" type="checkbox" checked/>
+										<label class="toggle-item" for="toggle_2_2"></label>
+									</div>
+								</li>
+								<li>
+									<h3>주기적 통신</h3>
+									<p>
+										<span>전체 IP : 32개 / 관리 IP : 12개</span>
+										<span>탐지건수 : 12건</span>
+									</p>
+									<div class="bar"></div>
+									<div class="toggle_box child">
+										<input id="toggle_2_3" name="type_s2" type="checkbox" checked/>
+										<label class="toggle-item" for="toggle_2_3"></label>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="box type_3">
+							<div class="t_b">
+								<span></span>원격 통신
+								<div class="toggle_box">
+									<input id="toggle_3" name="type_s3" type="checkbox" onclick='selectAll(this, "type_s3")'/>
+									<label class="toggle-item" for="toggle_3"></label>
+								</div>
+							</div>
+							<ul id="sortableType3">
+								<li>
+									<h3>RDP 통신</h3>
+									<p>
+										<span>전체 IP : 32개 / 관리 IP : 12개</span>
+										<span>탐지건수 : 12건</span>
+									</p>
+									<div class="bar"></div>
+									<div class="toggle_box child">
+										<input id="toggle_3_1" name="type_s3" type="checkbox" checked/>
+										<label class="toggle-item" for="toggle_3_1"></label>
+									</div>
+								</li>
+								<li>
+									<h3>SSH 통신</h3>
+									<p>
+										<span>전체 IP : 32개 / 관리 IP : 12개</span>
+										<span>탐지건수 : 12건</span>
+									</p>
+									<div class="bar"></div>
+									<div class="toggle_box child">
+										<input id="toggle_3_2" name="type_s3" type="checkbox" checked/>
+										<label class="toggle-item" for="toggle_3_2"></label>
+									</div>
+								</li>
+								<li>
+									<h3>SMB 통신</h3>
+									<p>
+										<span>전체 IP : 32개 / 관리 IP : 12개</span>
+										<span>탐지건수 : 12건</span>
+									</p>
+									<div class="bar"></div>
+									<div class="toggle_box child">
+										<input id="toggle_3_3" name="type_s3" type="checkbox"/>
+										<label class="toggle-item" for="toggle_3_3"></label>
+									</div>
+								</li>
+								<li>
+									<h3>FTP 통신</h3>
+									<p>
+										<span>전체 IP : 32개 / 관리 IP : 12개</span>
+										<span>탐지건수 : 12건</span>
+									</p>
+									<div class="bar"></div>
+									<div class="toggle_box child">
+										<input id="toggle_3_4" name="type_s3" type="checkbox"/>
+										<label class="toggle-item" for="toggle_3_4"></label>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="box type_4">
+							<div class="t_b"><span></span>사용자 정의 차단</div>
+							<ul id="sortableType4">
+								<li>
+									<h3>국가별 차단</h3>
+									<p>
+										<span>전체 IP : 32개 / 관리 IP : 12개</span>
+										<span>탐지건수 : 12건</span>
+									</p>
+									<div class="bar"></div>
+									<button type="button" id="ctyBlock">SET</button>
+								</li>
+								<li>
+									<h3>Inbound</h3>
+									<p>
+										<span>전체 IP : 32개 / 관리 IP : 12개</span>
+										<span>탐지건수 : 12건</span>
+									</p>
+									<div class="bar"></div>
+									<button type="button" id="inboundPop">SET</button>
+								</li>
+								<li>
+									<h3>Outbound</h3>
+									<p>
+										<span>전체 IP : 32개 / 관리 IP : 12개</span>
+										<span>탐지건수 : 12건</span>
+									</p>
+									<div class="bar"></div>
+									<button type="button" id="outboundPop">SET</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bottom">
+				<div class="map_wrap">
+					<div class="title">
+						<h2>국가별 트래픽 현황</h2>
+						<a href="./sub_01.html" class="link">+ 자세히보기</a>
+						<ul id="map_menu">
+							<li class="on">전체</li>
+							<li>Inbound 현황</li>
+							<li>Outbound 현황</li>
+						</ul>
+					</div>
+					<div class="cont">
+						<div class="map">
+							<img src="./assets/images/map.png" alt="map">
+							<div class="point type_1"></div>
+							<div class="point type_2"></div>
+							<div class="point type_3"></div>
+							<div class="point type_4"></div>
+							<div class="point type_5"></div>
+						</div>
+						<div class="list">
+							<div class="hd">
+								<h3>국가</h3>
+								<p>데이터 누적량</p>
+							</div>
+							<ul class="map_list">
+								<li class="type_1">
+									<h3>미국</h3>
+									<p>376.46 Mb</p>
+								</li>
+								<li class="type_2">
+									<h3>한국</h3>
+									<p>286.46 Mb</p>
+								</li>
+								<li class="type_3">
+									<h3>일본</h3>
+									<p>206.46 Mb</p>
+								</li>
+								<li class="type_4">
+									<h3>영국</h3>
+									<p>156.46 Mb</p>
+								</li>
+								<li class="type_5">
+									<h3>중국</h3>
+									<p>106.46 Mb</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="network_wrap">
+					<div class="title">
+						<h2>네트워크 현황</h2>
+						<a href="./sub_02.html" class="link">+ 자세히보기</a>
+						<ul id="network_menu">
+							<li class="on">Port 현황</li>
+							<li>App 현황</li>
+							<li>OS 현황</li>
+							<li>웹 통신 현황</li>
+						</ul>
+					</div>
+					<div class="cont donut" id="network_donutC">
+						<div class="chart_box">
+							<canvas id="main_donut_chart" width="220" height="220"></canvas>
+							<div class="percent" id="donutPer">
+								<div class="cate">
+									Port : <div class="cate_value">80</div>
+								</div>
+								<div class="per_value">
+									40<span>%</span>
+								</div>
+							</div>
+						</div>
+						<div class="list">
+							<div class="hd">
+								<h3>Port명</h3>
+								<p>누적량</p>
+							</div>
+							<ul class="chart_label">
+								<li class="type_1">
+									<h3>80</h3>
+									<p>40%</p>
+								</li>
+								<li class="type_2">
+									<h3>8080</h3>
+									<p>25%</p>
+								</li>
+								<li class="type_3">
+									<h3>3306</h3>
+									<p>20%</p>
+								</li>
+								<li class="type_4">
+									<h3>21</h3>
+									<p>15%</p>
+								</li>
+								<li class="type_5">
+									<h3>9999</h3>
+									<p>5%</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="cont line" id="network_lineC">
+						<div class="chart_box">
+							<canvas id="main_line_chart" width="520" height="270"></canvas>
+						</div>
+						<div class="list">
+							<div class="hd">
+								<h3>IP</h3>
+							</div>
+							<ul class="chart_label">
+								<li class="type_1">
+									<h3>1.1.1.1</h3>
+								</li>
+								<li class="type_2">
+									<h3>128.128.128.128</h3>
+								</li>
+								<li class="type_3">
+									<h3>256.256.256.256</h3>
+								</li>
+								<li class="type_4">
+									<h3>128.265.265.2</h3>
+								</li>
+								<li class="type_5">
+									<h3>198.198.198.198</h3>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 상세 계정 정보 팝업 -->
+		<div class="detail_layer pi_detail_layer">
+			<div class="box2">
+				<div class="title">
+					<h2>상세 계정 정보</h2>
+					<div class="close cancel"></div>
+				</div>
+				<div class="info_submit">
+					<div class="info_ofh">
+						<div>
+							<p>ID : </p>
+							planty
+						</div>
+						<div>
+							<p>회선 번호 : </p>
+							7529586
+						</div>
+					</div>
+					<div class="info_ofh">
+						<div>
+							<p>고객사명 : </p>
+							플랜티넷
+						</div>
+						<div>
+							<p>호스팅 업체 : </p>
+							플랜티 호스팅
+						</div>
+					</div>
+					<div class="info_input">
+						<label>담당자 이름 : </label>
+						<input type="text">
+					</div>
+					<div class="info_input">
+						<label>비밀번호 : </label>
+						<input type="password">
+					</div>
+					<div class="info_input">
+						<label>비밀번호 확인 : </label>
+						<input type="password">
+					</div>
+					<div class="info_input">
+						<label>연락처 : </label>
+						<input type="text">
+					</div>
+					<div class="info_input">
+						<label>E-Mail : </label>
+						<input type="text">
+					</div>
+					<div class="info_ofh">
+						<div>
+							<p>서비스 등급 : </p>
+							Premium
+						</div>
+						<div>
+							<p>계정 상태 : </p>
+							정상
+						</div>
+					</div>
+					<div class="textarea">
+						<h4>서비스 IP</h4>
+						<textarea></textarea>
+					</div>
+					<div class="textarea">
+						<h4>설정 VLAN</h4>
+						<textarea></textarea>
+					</div>
+					<div class="btn_box">
+						<button type="button" class="cancel">CANCEL</button>
+						<button type="button" class="save">SAVE</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 관리자 문의하기 팝업 -->
+		<div class="detail_layer inq_detail_layer">
+			<div class="box2">
+				<div class="title">
+					<h2>관리자 문의하기</h2>
+					<div class="close cancel"></div>
+				</div>
+				<div class="inq_submit">
+					<input class="icon_input icon_1" type="text" placeholder="ID를 입력하세요*">
+					<input class="icon_input icon_2" type="text" placeholder="E-MAIL를 입력하세요*">
+					<input class="icon_input icon_3 warning" type="text" placeholder="고객사명을 입력하세요*">
+					<input class="icon_input icon_4 warning" type="text" placeholder="연락처를 입력하세요*">
+					<textarea class="icon_textarea" placeholder="문의 내용을 입력해 주세요."></textarea>
+					<div class="btn_box2">
+						<button type="button" class="inquiry_btn">문의하기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 국가별 차단 관리 팝업 -->
+		<div class="detail_layer cty_block_layer">
+			<div class="box">
+				<div class="title">
+					<h2>국가별 차단 관리</h2>
+					<div class="close"></div>
+				</div>
+				<div class="search_radio_box">
+					<div class="r_box">
+						<div class="radio_box">
+							<input type="radio" name="search_r" id="radio_search_1" checked>
+							<label for="radio_search_1">IP</label>
+							<input type="text" placeholder="차단 관리할 IP를 검색해 주세요." />
+							<button type="button">SEARCH</button>
+						</div>
+					</div>
+					<div class="r_box">
+						<div class="radio_box">
+							<input type="radio" name="search_r" id="radio_search_2">
+							<label for="radio_search_2">그룹</label>
+							<input type="text" placeholder="차단 관리할 그룹을 검색해 주세요." />
+							<button type="button">SEARCH</button>
+						</div>
+					</div>
+				</div>
+				<div class="cty_select_wrap">
+					<div class="search_tit">
+						<h3>국가 선택</h3>
+						<div class="search">
+							<input type="text" placeholder="국가 검색" />
+							<button type="button">SEARCH</button>
+							<button class="reset" type="button">RESET</button>
+						</div>
+					</div>
+					<ul>
+						<li class="on">
+							<input type="checkbox" name="country" id="country_1">
+							<label for="country_1">나이지리아</label>
+						</li>
+						<li>
+							<input type="checkbox" name="country" id="country_2">
+							<label for="country_2">나이지리아</label>
+						</li>
+						<li>
+							<input type="checkbox" name="country" id="country_3">
+							<label for="country_3">나이지리아</label>
+						</li>
+						<li class="on">
+							<input type="checkbox" name="country" id="country_4">
+							<label for="country_4">나이지리아</label>
+						</li>
+						<li>
+							<input type="checkbox" name="country" id="country_5">
+							<label for="country_5">나이지리아</label>
+						</li>
+						<li>
+							<input type="checkbox" name="country" id="country_6">
+							<label for="country_6">나이지리아</label>
+						</li>
+						<li class="on">
+							<input type="checkbox" name="country" id="country_7">
+							<label for="country_7">나이지리아</label>
+						</li>
+						<li class="on">
+							<input type="checkbox" name="country" id="country_8">
+							<label for="country_8">나이지리아</label>
+						</li>
+						<li>
+							<input type="checkbox" name="country" id="country_9">
+							<label for="country_9">나이지리아</label>
+						</li>
+						<li>
+							<input type="checkbox" name="country" id="country_10">
+							<label for="country_10">나이지리아</label>
+						</li>
+						<li>
+							<input type="checkbox" name="country" id="country_11">
+							<label for="country_11">나이지리아</label>
+						</li>
+						<li>
+							<input type="checkbox" name="country" id="country_12">
+							<label for="country_12">나이지리아</label>
+						</li>
+						<li>
+							<input type="checkbox" name="country" id="country_13">
+							<label for="country_13">나이지리아</label>
+						</li>
+					</ul>
+				</div>
+				<div class="table_box">
+					<ul class="th">
+						<li>국가명</li>
+						<li>CC</li>
+						<li>Inbound Traffic</li>
+						<li>Outbound Traffic</li>
+					</ul>
+					<ul class="tr">
+						<li>나이지리아</li>
+						<li>RU</li>
+						<li>2454.51Mb</li>
+						<li>2454.51Mb</li>
+					</ul>
+				</div>
+				<div class="block_btn_box">
+					<button type="button" class="unblock">UNBLOCK</button>
+					<button type="button" class="block">BLOCK</button>
+				</div>
+			</div>
+		</div>
+		<!-- Inbound, Outbound SET 팝업 -->
+		<div class="detail_layer in_out_layer">
+			<div class="box">
+				<div class="title">
+					<h2 class="tit">Inbound 차단 관리</h2>
+					<div class="close"></div>
+				</div>
+				<div class="table_wrap">
+					<div class="top">
+						<div class="group_mbtn">
+							<button type="button" class="unblock">UNBLOCK</button>
+							<button type="button" class="block">BLOCK</button>
+						</div>
+					</div>
+					<table class="table table-grade type2">
+						<thead>
+							<th><input type="checkbox" name="" id=""></th>
+							<th>고객사 IP</th>
+							<th>측정일</th>
+							<th>외부망 IP</th>
+							<th>목적지 Port</th>
+							<th>Inbound 트래픽</th>
+							<th>차단 설정 일시</th>
+							<th>차단 상태</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td><input type="checkbox" name="" id=""></td>
+								<td>128.127.129.1</td>
+								<td>2021.07.29</td>
+								<td>1.1.1.1</td>
+								<td>443</td>
+								<td>195Gb</td>
+								<td>2021.08.11</td>
+								<td>차단</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="" id=""></td>
+								<td>128.127.129.1</td>
+								<td>2021.07.29</td>
+								<td>1.1.1.1</td>
+								<td>443</td>
+								<td>195Gb</td>
+								<td>2021.08.11</td>
+								<td>차단</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="" id=""></td>
+								<td>128.127.129.1</td>
+								<td>2021.07.29</td>
+								<td>1.1.1.1</td>
+								<td>443</td>
+								<td>195Gb</td>
+								<td>2021.08.11</td>
+								<td>차단</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="" id=""></td>
+								<td>128.127.129.1</td>
+								<td>2021.07.29</td>
+								<td>1.1.1.1</td>
+								<td>443</td>
+								<td>195Gb</td>
+								<td>2021.08.11</td>
+								<td>차단</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="" id=""></td>
+								<td>128.127.129.1</td>
+								<td>2021.07.29</td>
+								<td>1.1.1.1</td>
+								<td>443</td>
+								<td>195Gb</td>
+								<td>2021.08.11</td>
+								<td>차단</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="" id=""></td>
+								<td>128.127.129.1</td>
+								<td>2021.07.29</td>
+								<td>1.1.1.1</td>
+								<td>443</td>
+								<td>195Gb</td>
+								<td>2021.08.11</td>
+								<td>차단</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="" id=""></td>
+								<td>128.127.129.1</td>
+								<td>2021.07.29</td>
+								<td>1.1.1.1</td>
+								<td>443</td>
+								<td>195Gb</td>
+								<td>2021.08.11</td>
+								<td>차단</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="" id=""></td>
+								<td>128.127.129.1</td>
+								<td>2021.07.29</td>
+								<td>1.1.1.1</td>
+								<td>443</td>
+								<td>195Gb</td>
+								<td>2021.08.11</td>
+								<td>차단</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="" id=""></td>
+								<td>128.127.129.1</td>
+								<td>2021.07.29</td>
+								<td>1.1.1.1</td>
+								<td>443</td>
+								<td>195Gb</td>
+								<td>2021.08.11</td>
+								<td>차단</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="" id=""></td>
+								<td>128.127.129.1</td>
+								<td>2021.07.29</td>
+								<td>1.1.1.1</td>
+								<td>443</td>
+								<td>195Gb</td>
+								<td>2021.08.11</td>
+								<td>차단</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="bottom">
+						<select>
+							<option>10개씩 보기</option>
+							<option>30개씩 보기</option>
+							<option>50개씩 보기</option>
+						</select>
+						<ul class="paging">
+							<li class="arr first"><<</li>
+							<li class="arr prev"><</li>
+							<li class="active">1</li>
+							<li>2</li>
+							<li>3</li>
+							<li>4</li>
+							<li>5</li>
+							<li class="arr right">></li>
+							<li class="arr last">>></li>
+						</ul>
+						<button class="export" type="button">EXPORT</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="./assets/lib/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" ></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="./assets/js/common.js?2110260127"></script>
+	<script src="./assets/js/main.js?2110260127"></script>
+</body>
+</html>

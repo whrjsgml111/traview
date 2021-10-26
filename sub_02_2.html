@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="./assets/css/style.css?2110260127" />
+<title>TRAVIEW</title>
+</head>
+<body>
+	<div class="wrap">
+		<!-- header -->
+		<div class="header">
+			<div class="logo">
+				<img src="./assets/images/traview.png" alt="logo">
+			</div>
+			<!-- SAFE -->
+			<!-- <div class="login_box safe">
+				<div class="status">SAFE</div>
+				<p>현재 홍길동 고객님의 네트워크는 <span>안전</span>하게 보호되고 있습니다.</p>
+				<div class="my_icon"></div>
+			</div> -->
+			<!-- NOTICE -->
+			<!-- <div class="login_box notice">
+				<div class="status">Notice</div>
+				<p>현재 홍길동 고객님의 네트워크는 <span>주의</span>가 필요한 상태입니다.</p>
+				<div class="my_icon"></div>
+			</div> -->
+			<!-- DANGER -->
+			<div class="login_box danger">
+				<div class="status">Danger</div>
+				<p>현재 홍길동 고객님의 네트워크는 <span>위협</span>으로부터 <span>취약</span>한 상태입니다.</p>
+				<div class="my_icon"></div>
+			</div>
+		</div>
+		<!-- left menu -->
+		<div class="left_menu">
+			<div class="menu_icon"></div>
+			<ul>
+				<li class="dashboard">
+					<a href="./main.html">
+						<div class="icon"></div>
+						<span>대시보드</span>
+					</a>
+				</li>
+				<li class="security">
+					<a href="./sub_01.html">
+						<div class="icon"></div>
+						<span>보안 위협 탐지</span>
+					</a>
+				</li>
+				<li class="network sub on">
+					<a href="javascript:;">
+						<div class="icon"></div>
+						<span>Network 운영 현황</span>
+					</a>
+					<div class="child_box">
+						<a href="./sub_02.html" class="sub_title">- Network 운영 현황</a>
+						<a href="./sub_02_1.html" class="sub_title">- 그룹 관리</a>
+						<a href="./sub_02_2.html" class="sub_title">- 보안 설정</a>
+					</div>
+				</li>
+				<li class="report">
+					<a href="./sub_03.html">
+						<div class="icon"></div>
+						<span>보고서</span>
+					</a>
+				</li>
+				<li class="setting sub">
+					<a href="javascript:;">
+						<div class="icon"></div>
+						<span>시스템 관리</span>
+					</a>
+					<div class="child_box">
+						<a href="./sub_04.html" class="sub_title">- 계정 관리</a>
+						<a href="./sub_04_1.html" class="sub_title">- 감사 로그</a>
+					</div>
+				</li>
+			</ul>
+			<div class="line"></div>
+		</div>
+		<!-- sub_container -->
+		<div class="sub_container">
+			<div class="title">
+				<h2>보안 설정</h2>
+				<p>> Network Operation Status > Security Settings</p>
+			</div>
+			<div class="setting_wrap">
+				<!-- 악성 통신 -->
+				<div class="cont type_1">
+					<div class="t_b">
+						<span></span>악성통신
+						<div class="toggle_box check_all">
+							<input id="toggle_1" name="type_s1" type="checkbox" checked/>
+							<label class="toggle-item" for="toggle_1"></label>
+						</div>
+					</div>
+					<ul class="box_w">
+						<li class="on">
+							<div class="line"></div>
+							<div class="inner">
+								<div class="tit tit_show">
+									<h3>
+										봇넷 통신
+										<span>(적용 IP : 42개)</span>
+									</h3>
+									<div class="switch">
+										<div class="toggle_box child">
+											<input id="toggle_1_1" name="type_s1" type="checkbox" checked/>
+											<label class="toggle-item" for="toggle_1_1"></label>
+										</div>
+										<div class="arrow"></div>
+									</div>
+								</div>
+								<div class="set_group">
+									<p class="fst">전체 IP : 42개 / <b>적용 IP : 12개</b></p>
+									<p>위험 탐지 : 78개 / <b>차단 건수 : 55개</b></p>
+									<div class="radio_box all">
+										<input type="radio" name="type_r1_1" id="radio_1_1a" checked>
+										<label for="radio_1_1a">ALL</label>
+									</div>
+									<div class="radio_box group">
+										<input type="radio" name="type_r1_1" id="radio_1_1b">
+										<label for="radio_1_1b">그룹</label>
+										<a href="./sub_02_1.html" class="link">+ 그룹 관리 바로가기</a>
+									</div>
+									<div class="group_search">
+										<select>
+											<option>그룹1</option>
+											<option>그룹2</option>
+											<option>그룹3</option>
+										</select>
+										<button type="button">ADD</button>
+									</div>
+									<ul class="dbox">
+										<li>
+											서비스인프라1팀
+											<span class="close"></span>
+										</li>
+										<li>
+											서비스인프라2팀
+											<span class="close"></span>
+										</li>
+										<li>
+											개발1팀
+											<span class="close"></span>
+										</li>
+									</ul>
+									<div class="btn">
+										<button type="button" class="cancel">CANCEL</button>
+										<button type="button" class="save">SAVE</button>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="on">
+							<div class="line"></div>
+							<div class="inner">
+								<div class="tit tit_show">
+									<h3>
+										C&C 통신
+										<span>(적용 IP : 42개)</span>
+									</h3>
+									<div class="switch">
+										<div class="toggle_box child">
+											<input id="toggle_1_2" name="type_s1" type="checkbox"/>
+											<label class="toggle-item" for="toggle_1_2"></label>
+										</div>
+										<div class="arrow"></div>
+									</div>
+								</div>
+								<div class="set_group">
+									<p class="fst">전체 IP : 42개 / <b>적용 IP : 12개</b></p>
+									<p>위험 탐지 : 78개 / <b>차단 건수 : 55개</b></p>
+									<div class="radio_box all">
+										<input type="radio" name="type_r1_2" id="radio_1_2a" checked>
+										<label for="radio_1_2a">ALL</label>
+									</div>
+									<div class="radio_box group">
+										<input type="radio" name="type_r1_2" id="radio_1_2b">
+										<label for="radio_1_2b">그룹</label>
+										<a href="./sub_02_1.html" class="link">+ 그룹 관리 바로가기</a>
+									</div>
+									<div class="group_search">
+										<select>
+											<option>그룹1</option>
+											<option>그룹2</option>
+											<option>그룹3</option>
+										</select>
+										<button type="button">ADD</button>
+									</div>
+									<ul class="dbox">
+										<li>
+											서비스인프라1팀
+											<span class="close"></span>
+										</li>
+										<li>
+											서비스인프라2팀
+											<span class="close"></span>
+										</li>
+										<li>
+											개발1팀
+											<span class="close"></span>
+										</li>
+									</ul>
+									<div class="btn">
+										<button type="button" class="cancel">CANCEL</button>
+										<button type="button" class="save">SAVE</button>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- 악성 의심 통신 -->
+				<div class="cont type_2">
+					<div class="t_b">
+						<span></span>악성 의심 통신
+						<div class="toggle_box check_all">
+							<input id="toggle_2" name="type_s2" type="checkbox" checked/>
+							<label class="toggle-item" for="toggle_2"></label>
+						</div>
+					</div>
+					<ul class="box_w">
+						<li>
+							<div class="line"></div>
+							<div class="inner">
+								<div class="tit tit_show">
+									<h3>
+										SQL 인젝션
+										<span>(적용 IP : 42개)</span>
+									</h3>
+									<div class="switch">
+										<div class="toggle_box child">
+											<input id="toggle_2_1" name="type_s2" type="checkbox" checked/>
+											<label class="toggle-item" for="toggle_2_1"></label>
+										</div>
+										<div class="arrow"></div>
+									</div>
+								</div>
+								<div class="set_group">
+									<p class="fst">전체 IP : 42개 / <b>적용 IP : 12개</b></p>
+									<p>위험 탐지 : 78개 / <b>차단 건수 : 55개</b></p>
+									<div class="radio_box all">
+										<input type="radio" name="type_r2_1" id="radio_2_1a" checked>
+										<label for="radio_2_1a">ALL</label>
+									</div>
+									<div class="radio_box group">
+										<input type="radio" name="type_r2_1" id="radio_2_1b">
+										<label for="radio_2_1b">그룹</label>
+										<a href="./sub_02_1.html" class="link">+ 그룹 관리 바로가기</a>
+									</div>
+									<div class="group_search">
+										<select>
+											<option>그룹1</option>
+											<option>그룹2</option>
+											<option>그룹3</option>
+										</select>
+										<button type="button">ADD</button>
+									</div>
+									<ul class="dbox">
+										<li>
+											서비스인프라1팀
+											<span class="close"></span>
+										</li>
+										<li>
+											서비스인프라2팀
+											<span class="close"></span>
+										</li>
+										<li>
+											개발1팀
+											<span class="close"></span>
+										</li>
+									</ul>
+									<div class="btn">
+										<button type="button" class="cancel">CANCEL</button>
+										<button type="button" class="save">SAVE</button>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="line"></div>
+							<div class="inner">
+								<div class="tit tit_show">
+									<h3>
+										Sock Proxy
+										<span>(적용 IP : 42개)</span>
+									</h3>
+									<div class="switch">
+										<div class="toggle_box child">
+											<input id="toggle_2_2" name="type_s2" type="checkbox" checked/>
+											<label class="toggle-item" for="toggle_2_2"></label>
+										</div>
+										<div class="arrow"></div>
+									</div>
+								</div>
+								<div class="set_group">
+									<p class="fst">전체 IP : 42개 / <b>적용 IP : 12개</b></p>
+									<p>위험 탐지 : 78개 / <b>차단 건수 : 55개</b></p>
+									<div class="radio_box all">
+										<input type="radio" name="type_r2_2" id="radio_2_2a" checked>
+										<label for="radio_2_2a">ALL</label>
+									</div>
+									<div class="radio_box group">
+										<input type="radio" name="type_r2_2" id="radio_2_2b">
+										<label for="radio_2_2b">그룹</label>
+										<a href="./sub_02_1.html" class="link">+ 그룹 관리 바로가기</a>
+									</div>
+									<div class="group_search">
+										<select>
+											<option>그룹1</option>
+											<option>그룹2</option>
+											<option>그룹3</option>
+										</select>
+										<button type="button">ADD</button>
+									</div>
+									<ul class="dbox">
+										<li>
+											서비스인프라1팀
+											<span class="close"></span>
+										</li>
+										<li>
+											서비스인프라2팀
+											<span class="close"></span>
+										</li>
+										<li>
+											개발1팀
+											<span class="close"></span>
+										</li>
+									</ul>
+									<div class="btn">
+										<button type="button" class="cancel">CANCEL</button>
+										<button type="button" class="save">SAVE</button>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="line"></div>
+							<div class="inner">
+								<div class="tit tit_show">
+									<h3>
+										주기적 통신
+										<span>(적용 IP : 42개)</span>
+									</h3>
+									<div class="switch">
+										<div class="toggle_box child">
+											<input id="toggle_2_3" name="type_s2" type="checkbox" checked/>
+											<label class="toggle-item" for="toggle_2_3"></label>
+										</div>
+										<div class="arrow"></div>
+									</div>
+								</div>
+								<div class="set_group">
+									<p class="fst">전체 IP : 42개 / <b>적용 IP : 12개</b></p>
+									<p>위험 탐지 : 78개 / <b>차단 건수 : 55개</b></p>
+									<div class="radio_box all">
+										<input type="radio" name="type_r2_3" id="radio_2_3a" checked>
+										<label for="radio_2_3a">ALL</label>
+									</div>
+									<div class="radio_box group">
+										<input type="radio" name="type_r2_3" id="radio_2_3b">
+										<label for="radio_2_3b">그룹</label>
+										<a href="./sub_02_1.html" class="link">+ 그룹 관리 바로가기</a>
+									</div>
+									<div class="group_search">
+										<select>
+											<option>그룹1</option>
+											<option>그룹2</option>
+											<option>그룹3</option>
+										</select>
+										<button type="button">ADD</button>
+									</div>
+									<ul class="dbox">
+										<li>
+											서비스인프라1팀
+											<span class="close"></span>
+										</li>
+										<li>
+											서비스인프라2팀
+											<span class="close"></span>
+										</li>
+										<li>
+											개발1팀
+											<span class="close"></span>
+										</li>
+									</ul>
+									<div class="btn">
+										<button type="button" class="cancel">CANCEL</button>
+										<button type="button" class="save">SAVE</button>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- 원격 통신 -->
+				<div class="cont type_3">
+					<div class="t_b">
+						<span></span>원격 통신
+						<div class="toggle_box check_all">
+							<input id="toggle_3" name="type_s3" type="checkbox" checked/>
+							<label class="toggle-item" for="toggle_3"></label>
+						</div>
+					</div>
+					<ul class="box_w">
+						<li class="w100">
+							<div class="line"></div>
+							<div class="inner">
+								<div class="tit tit_show">
+									<h3>
+										RDP 통신
+										<span>(적용 IP : 42개)</span>
+									</h3>
+									<div class="switch">
+										<div class="toggle_box child">
+											<input id="toggle_3_1" name="type_s3" type="checkbox" checked/>
+											<label class="toggle-item" for="toggle_3_1"></label>
+										</div>
+										<div class="arrow"></div>
+									</div>
+								</div>
+								<div class="set_group">
+									<p class="fst">전체 IP : 42개 / <b>적용 IP : 12개</b></p>
+									<p>위험 탐지 : 78개 / <b>차단 건수 : 55개</b></p>
+									<h4>포트 설정</h4>
+									<div class="group_search port">
+										<input type="text" id="" placeholder="차단할 포트를 추가하세요.">
+										<button type="button">ADD</button>
+										<ul class="list">
+											<li>
+												9999
+												<span class="close"></span>
+											</li>
+										</ul>
+									</div>
+									<div class="cmu_box">
+										<div class="add">
+											<div class="left">
+												<div class="radio_box all">
+													<input type="radio" name="type_r3_1" id="radio_3_1a" checked>
+													<label for="radio_3_1a">ALL</label>
+												</div>
+												<div class="radio_box group">
+													<input type="radio" name="type_r3_1" id="radio_3_1b">
+													<label for="radio_3_1b">그룹</label>
+													<a href="./sub_02_1.html" class="link">+ 그룹 관리 바로가기</a>
+												</div>
+												<div class="group_search">
+													<select>
+														<option>그룹1</option>
+														<option>그룹2</option>
+														<option>그룹3</option>
+													</select>
+													<button type="button">ADD</button>
+												</div>
+												<ul class="dbox">
+													<li>
+														서비스인프라1팀
+														<span class="close"></span>
+													</li>
+													<li>
+														서비스인프라2팀
+														<span class="close"></span>
+													</li>
+												</ul>
+											</div>
+											<div class="right">
+												<div class="iptit">차단할 외부 IP</div>
+												<div class="group_search">
+													<input type="text" id="" placeholder="차단할 IP를 입력하세요.">
+													<button type="button">ADD</button>
+												</div>
+												<ul class="dbox">
+													<li>
+														123.123.123.123
+														<span class="close"></span>
+													</li>
+													<li>
+														233.255.233.111
+														<span class="close"></span>
+													</li>
+												</ul>
+											</div>
+											<div class="modify">
+												<button type="button">MODIFY</button>
+											</div>
+										</div>
+										<div class="table_wrap">
+											<table class="table table-grade">
+												<thead>
+													<th><input type="checkbox"></th>
+													<th>그룹명</th>
+													<th>IP 개수</th>
+													<th>외부 IP</th>
+												</thead>
+												<tbody>
+													<tr>
+														<td><input type="checkbox"></td>
+														<td>서비스분석팀</td>
+														<td>18</td>
+														<td>128.128.128.128</td>
+													</tr>
+													<tr>
+														<td><input type="checkbox"></td>
+														<td>서비스분석팀</td>
+														<td>18</td>
+														<td>128.128.128.128</td>
+													</tr>
+													<tr>
+														<td><input type="checkbox"></td>
+														<td>서비스분석팀</td>
+														<td>18</td>
+														<td>128.128.128.128</td>
+													</tr>
+												</tbody>
+											</table>
+											<div class="setting">
+												<button type="button">DELETE</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="w100">
+							<div class="line"></div>
+							<div class="inner">
+								<div class="tit tit_show">
+									<h3>
+										SSH 통신
+										<span>(적용 IP : 42개)</span>
+									</h3>
+									<div class="switch">
+										<div class="toggle_box child">
+											<input id="toggle_3_2" name="type_s3" type="checkbox" checked/>
+											<label class="toggle-item" for="toggle_3_2"></label>
+										</div>
+										<div class="arrow"></div>
+									</div>
+								</div>
+								<div class="set_group">
+									<p class="fst">전체 IP : 42개 / <b>적용 IP : 12개</b></p>
+									<p>위험 탐지 : 78개 / <b>차단 건수 : 55개</b></p>
+									<h4>포트 설정</h4>
+									<div class="group_search port">
+										<input type="text" id="" placeholder="차단할 포트를 추가하세요.">
+										<button type="button">ADD</button>
+										<ul class="list">
+											<li>
+												9999
+												<span class="close"></span>
+											</li>
+										</ul>
+									</div>
+									<div class="cmu_box">
+										<div class="add">
+											<div class="left">
+												<div class="radio_box all">
+													<input type="radio" name="type_r3_2" id="radio_3_2a" checked>
+													<label for="radio_3_2a">ALL</label>
+												</div>
+												<div class="radio_box group">
+													<input type="radio" name="type_r3_2" id="radio_3_2b">
+													<label for="radio_3_2b">그룹</label>
+													<a href="./sub_02_1.html" class="link">+ 그룹 관리 바로가기</a>
+												</div>
+												<div class="group_search">
+													<select>
+														<option>그룹1</option>
+														<option>그룹2</option>
+														<option>그룹3</option>
+													</select>
+													<button type="button">ADD</button>
+												</div>
+												<ul class="dbox">
+													<li>
+														서비스인프라1팀
+														<span class="close"></span>
+													</li>
+													<li>
+														서비스인프라2팀
+														<span class="close"></span>
+													</li>
+												</ul>
+											</div>
+											<div class="right">
+												<div class="iptit">차단할 외부 IP</div>
+												<div class="group_search">
+													<input type="text" id="" placeholder="차단할 IP를 입력하세요.">
+													<button type="button">ADD</button>
+												</div>
+												<ul class="dbox">
+													<li>
+														123.123.123.123
+														<span class="close"></span>
+													</li>
+													<li>
+														233.255.233.111
+														<span class="close"></span>
+													</li>
+												</ul>
+											</div>
+											<div class="modify">
+												<button type="button">MODIFY</button>
+											</div>
+										</div>
+										<div class="table_wrap">
+											<table class="table table-grade">
+												<thead>
+													<th><input type="checkbox"></th>
+													<th>그룹명</th>
+													<th>IP 개수</th>
+													<th>외부 IP</th>
+												</thead>
+												<tbody>
+													<tr>
+														<td><input type="checkbox"></td>
+														<td>서비스분석팀</td>
+														<td>18</td>
+														<td>128.128.128.128</td>
+													</tr>
+													<tr>
+														<td><input type="checkbox"></td>
+														<td>서비스분석팀</td>
+														<td>18</td>
+														<td>128.128.128.128</td>
+													</tr>
+													<tr>
+														<td><input type="checkbox"></td>
+														<td>서비스분석팀</td>
+														<td>18</td>
+														<td>128.128.128.128</td>
+													</tr>
+												</tbody>
+											</table>
+											<div class="setting">
+												<button type="button">DELETE</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="w100">
+							<div class="line"></div>
+							<div class="inner">
+								<div class="tit tit_show">
+									<h3>
+										SMB 통신
+										<span>(적용 IP : 42개)</span>
+									</h3>
+									<div class="switch">
+										<div class="toggle_box child">
+											<input id="toggle_3_3" name="type_s3" type="checkbox" checked/>
+											<label class="toggle-item" for="toggle_3_3"></label>
+										</div>
+										<div class="arrow"></div>
+									</div>
+								</div>
+								<div class="set_group">
+									<p class="fst">전체 IP : 42개 / <b>적용 IP : 12개</b></p>
+									<p>위험 탐지 : 78개 / <b>차단 건수 : 55개</b></p>
+									<h4>포트 설정</h4>
+									<div class="group_search port">
+										<input type="text" id="" placeholder="차단할 포트를 추가하세요.">
+										<button type="button">ADD</button>
+										<ul class="list">
+											<li>
+												9999
+												<span class="close"></span>
+											</li>
+										</ul>
+									</div>
+									<div class="cmu_box">
+										<div class="add">
+											<div class="left">
+												<div class="radio_box all">
+													<input type="radio" name="type_r3_3" id="radio_3_3a" checked>
+													<label for="radio_3_3a">ALL</label>
+												</div>
+												<div class="radio_box group">
+													<input type="radio" name="type_r3_3" id="radio_3_3b">
+													<label for="radio_3_3b">그룹</label>
+													<a href="./sub_02_1.html" class="link">+ 그룹 관리 바로가기</a>
+												</div>
+												<div class="group_search">
+													<select>
+														<option>그룹1</option>
+														<option>그룹2</option>
+														<option>그룹3</option>
+													</select>
+													<button type="button">ADD</button>
+												</div>
+												<ul class="dbox">
+													<li>
+														서비스인프라1팀
+														<span class="close"></span>
+													</li>
+													<li>
+														서비스인프라2팀
+														<span class="close"></span>
+													</li>
+												</ul>
+											</div>
+											<div class="right">
+												<div class="iptit">차단할 외부 IP</div>
+												<div class="group_search">
+													<input type="text" id="" placeholder="차단할 IP를 입력하세요.">
+													<button type="button">ADD</button>
+												</div>
+												<ul class="dbox">
+													<li>
+														123.123.123.123
+														<span class="close"></span>
+													</li>
+													<li>
+														233.255.233.111
+														<span class="close"></span>
+													</li>
+												</ul>
+											</div>
+											<div class="modify">
+												<button type="button">MODIFY</button>
+											</div>
+										</div>
+										<div class="table_wrap">
+											<table class="table table-grade">
+												<thead>
+													<th><input type="checkbox"></th>
+													<th>그룹명</th>
+													<th>IP 개수</th>
+													<th>외부 IP</th>
+												</thead>
+												<tbody>
+													<tr>
+														<td><input type="checkbox"></td>
+														<td>서비스분석팀</td>
+														<td>18</td>
+														<td>128.128.128.128</td>
+													</tr>
+													<tr>
+														<td><input type="checkbox"></td>
+														<td>서비스분석팀</td>
+														<td>18</td>
+														<td>128.128.128.128</td>
+													</tr>
+													<tr>
+														<td><input type="checkbox"></td>
+														<td>서비스분석팀</td>
+														<td>18</td>
+														<td>128.128.128.128</td>
+													</tr>
+												</tbody>
+											</table>
+											<div class="setting">
+												<button type="button">DELETE</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="w100">
+							<div class="line"></div>
+							<div class="inner">
+								<div class="tit tit_show">
+									<h3>
+										FTP 통신
+										<span>(적용 IP : 42개)</span>
+									</h3>
+									<div class="switch">
+										<div class="toggle_box child">
+											<input id="toggle_3_4" name="type_s3" type="checkbox" checked/>
+											<label class="toggle-item" for="toggle_3_4"></label>
+										</div>
+										<div class="arrow"></div>
+									</div>
+								</div>
+								<div class="set_group">
+									<p class="fst">전체 IP : 42개 / <b>적용 IP : 12개</b></p>
+									<p>위험 탐지 : 78개 / <b>차단 건수 : 55개</b></p>
+									<h4>포트 설정</h4>
+									<div class="group_search port">
+										<input type="text" id="" placeholder="차단할 포트를 추가하세요.">
+										<button type="button">ADD</button>
+										<ul class="list">
+											<li>
+												9999
+												<span class="close"></span>
+											</li>
+										</ul>
+									</div>
+									<div class="cmu_box">
+										<div class="add">
+											<div class="left">
+												<div class="radio_box all">
+													<input type="radio" name="type_r3_4" id="radio_3_4a" checked>
+													<label for="radio_3_4a">ALL</label>
+												</div>
+												<div class="radio_box group">
+													<input type="radio" name="type_r3_4" id="radio_3_4b">
+													<label for="radio_3_4b">그룹</label>
+													<a href="./sub_02_1.html" class="link">+ 그룹 관리 바로가기</a>
+												</div>
+												<div class="group_search">
+													<select>
+														<option>그룹1</option>
+														<option>그룹2</option>
+														<option>그룹3</option>
+													</select>
+													<button type="button">ADD</button>
+												</div>
+												<ul class="dbox">
+													<li>
+														서비스인프라1팀
+														<span class="close"></span>
+													</li>
+													<li>
+														서비스인프라2팀
+														<span class="close"></span>
+													</li>
+												</ul>
+											</div>
+											<div class="right">
+												<div class="iptit">차단할 외부 IP</div>
+												<div class="group_search">
+													<input type="text" id="" placeholder="차단할 IP를 입력하세요.">
+													<button type="button">ADD</button>
+												</div>
+												<ul class="dbox">
+													<li>
+														123.123.123.123
+														<span class="close"></span>
+													</li>
+													<li>
+														233.255.233.111
+														<span class="close"></span>
+													</li>
+												</ul>
+											</div>
+											<div class="modify">
+												<button type="button">MODIFY</button>
+											</div>
+										</div>
+										<div class="table_wrap">
+											<table class="table table-grade">
+												<thead>
+													<th><input type="checkbox"></th>
+													<th>그룹명</th>
+													<th>IP 개수</th>
+													<th>외부 IP</th>
+												</thead>
+												<tbody>
+													<tr>
+														<td><input type="checkbox"></td>
+														<td>서비스분석팀</td>
+														<td>18</td>
+														<td>128.128.128.128</td>
+													</tr>
+													<tr>
+														<td><input type="checkbox"></td>
+														<td>서비스분석팀</td>
+														<td>18</td>
+														<td>128.128.128.128</td>
+													</tr>
+													<tr>
+														<td><input type="checkbox"></td>
+														<td>서비스분석팀</td>
+														<td>18</td>
+														<td>128.128.128.128</td>
+													</tr>
+												</tbody>
+											</table>
+											<div class="setting">
+												<button type="button">DELETE</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- 사용자 정의 차단 -->
+				<div class="cont type_4">
+					<div class="t_b">
+						<span></span>사용자 정의 차단
+					</div>
+					<ul class="box_w">
+						<li class="w100">
+							<div class="line"></div>
+							<div class="inner">
+								<div class="tit tit_show">
+									<h3>
+										국가별 차단 내역
+										<span>(적용 IP : 42개)</span>
+									</h3>
+									<div class="switch">
+										<div class="arrow"></div>
+									</div>
+								</div>
+								<div class="set_group">
+									<div class="table_wrap">
+										<table class="table table-grade">
+											<thead>
+												<th>고객사 IP</th>
+												<th>접속국가</th>
+												<th>유입 IP</th>
+												<th>차단 설정 일시</th>
+												<th>차단 설정</th>
+											</thead>
+											<tbody>
+												<tr>
+													<td>128.128.128.128</td>
+													<td>US</td>
+													<td>125.125.125.125~1225.125.125.125</td>
+													<td>2010.05.02</td>
+													<td>차단</td>
+												</tr>
+												<tr>
+													<td>128.128.128.128</td>
+													<td>US</td>
+													<td>125.125.125.125~1225.125.125.125</td>
+													<td>2010.05.02</td>
+													<td>차단</td>
+												</tr>
+												<tr>
+													<td>128.128.128.128</td>
+													<td>US</td>
+													<td>125.125.125.125~1225.125.125.125</td>
+													<td>2010.05.02</td>
+													<td>차단</td>
+												</tr>
+												<tr>
+													<td>128.128.128.128</td>
+													<td>US</td>
+													<td>125.125.125.125~1225.125.125.125</td>
+													<td>2010.05.02</td>
+													<td>차단</td>
+												</tr>
+												<tr>
+													<td>128.128.128.128</td>
+													<td>US</td>
+													<td>125.125.125.125~1225.125.125.125</td>
+													<td>2010.05.02</td>
+													<td>차단</td>
+												</tr>
+											</tbody>
+										</table>
+										<div class="setting">
+											<button type="button" id="ctyBlock">SETTING</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="w100">
+							<div class="line"></div>
+							<div class="inner">
+								<div class="tit tit_show">
+									<h3>
+										Inbound
+										<span>(적용 IP : 42개)</span>
+									</h3>
+									<div class="switch">
+										<div class="arrow"></div>
+									</div>
+								</div>
+								<div class="set_group">
+									<div class="table_wrap">
+										<ul class="input_search_box">
+											<li>
+												<label>차단 IP</label>
+												<input type="text">
+											</li>
+											<li>
+												<label>고객 IP</label>
+												<input type="text">
+											</li>
+											<li>
+												<label>차단 Port</label>
+												<input type="text">
+											</li>
+											<li>
+												<button type="button">PASSIVE REGISTER</button>
+											</li>
+										</ul>
+										<table class="table table-grade">
+											<thead>
+												<th><input type="checkbox"></th>
+												<th>고객사 IP</th>
+												<th>접속국가</th>
+												<th>유입 IP</th>
+												<th>차단 설정 일시</th>
+												<th>차단 설정</th>
+											</thead>
+											<tbody>
+												<tr>
+													<td><input type="checkbox"></td>
+													<td>128.128.128.128</td>
+													<td>US</td>
+													<td>125.125.125.125~1225.125.125.125</td>
+													<td>2010.05.02</td>
+													<td>차단</td>
+												</tr>
+												<tr>
+													<td><input type="checkbox"></td>
+													<td>128.128.128.128</td>
+													<td>US</td>
+													<td>125.125.125.125~1225.125.125.125</td>
+													<td>2010.05.02</td>
+													<td>차단</td>
+												</tr>
+												<tr>
+													<td><input type="checkbox"></td>
+													<td>128.128.128.128</td>
+													<td>US</td>
+													<td>125.125.125.125~1225.125.125.125</td>
+													<td>2010.05.02</td>
+													<td>차단</td>
+												</tr>
+												<tr>
+													<td><input type="checkbox"></td>
+													<td>128.128.128.128</td>
+													<td>US</td>
+													<td>125.125.125.125~1225.125.125.125</td>
+													<td>2010.05.02</td>
+													<td>차단</td>
+												</tr>
+												<tr>
+													<td><input type="checkbox"></td>
+													<td>128.128.128.128</td>
+													<td>US</td>
+													<td>125.125.125.125~1225.125.125.125</td>
+													<td>2010.05.02</td>
+													<td>차단</td>
+												</tr>
+											</tbody>
+										</table>
+										<div class="setting">
+											<button type="button" id="inboundPop">SETTING</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="w100">
+							<div class="line"></div>
+							<div class="inner">
+								<div class="tit tit_show">
+									<h3>
+										Outbound
+										<span>(적용 IP : 42개)</span>
+									</h3>
+									<div class="switch">
+										<div class="arrow"></div>
+									</div>
+								</div>
+								<div class="set_group">
+									<div class="table_wrap">
+										<ul class="input_search_box">
+											<li>
+												<label>차단 IP</label>
+												<input type="text">
+											</li>
+											<li>
+												<label>고객 IP</label>
+												<input type="text">
+											</li>
+											<li>
+												<label>차단 Port</label>
+												<input type="text">
+											</li>
+											<li>
+												<button type="button">PASSIVE REGISTER</button>
+											</li>
+										</ul>
+										<table class="table table-grade">
+											<thead>
+												<th><input type="checkbox"></th>
+												<th>고객사 IP</th>
+												<th>접속국가</th>
+												<th>유입 IP</th>
+												<th>차단 설정 일시</th>
+												<th>차단 설정</th>
+											</thead>
+											<tbody>
+												<tr>
+													<td><input type="checkbox"></td>
+													<td>128.128.128.128</td>
+													<td>US</td>
+													<td>125.125.125.125~1225.125.125.125</td>
+													<td>2010.05.02</td>
+													<td>차단</td>
+												</tr>
+												<tr>
+													<td><input type="checkbox"></td>
+													<td>128.128.128.128</td>
+													<td>US</td>
+													<td>125.125.125.125~1225.125.125.125</td>
+													<td>2010.05.02</td>
+													<td>차단</td>
+												</tr>
+												<tr>
+													<td><input type="checkbox"></td>
+													<td>128.128.128.128</td>
+													<td>US</td>
+													<td>125.125.125.125~1225.125.125.125</td>
+													<td>2010.05.02</td>
+													<td>차단</td>
+												</tr>
+												<tr>
+													<td><input type="checkbox"></td>
+													<td>128.128.128.128</td>
+													<td>US</td>
+													<td>125.125.125.125~1225.125.125.125</td>
+													<td>2010.05.02</td>
+													<td>차단</td>
+												</tr>
+												<tr>
+													<td><input type="checkbox"></td>
+													<td>128.128.128.128</td>
+													<td>US</td>
+													<td>125.125.125.125~1225.125.125.125</td>
+													<td>2010.05.02</td>
+													<td>차단</td>
+												</tr>
+											</tbody>
+										</table>
+										<div class="setting">
+											<button type="button" id="outboundPop">SETTING</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- 국가별 차단 관리 팝업 -->
+		<div class="detail_layer cty_block_layer">
+			<div class="box">
+				<div class="title">
+					<h2>국가별 차단 관리</h2>
+					<div class="close"></div>
+				</div>
+				<div class="search_radio_box">
+					<div class="r_box">
+						<div class="radio_box">
+							<input type="radio" name="search_r" id="radio_search_1" checked>
+							<label for="radio_search_1">IP</label>
+							<input type="text" placeholder="차단 관리할 IP를 검색해 주세요." />
+							<button type="button">SEARCH</button>
+						</div>
+					</div>
+					<div class="r_box">
+						<div class="radio_box">
+							<input type="radio" name="search_r" id="radio_search_2">
+							<label for="radio_search_2">그룹</label>
+							<input type="text" placeholder="차단 관리할 그룹을 검색해 주세요." />
+							<button type="button">SEARCH</button>
+						</div>
+					</div>
+				</div>
+				<div class="cty_select_wrap">
+					<div class="search_tit">
+						<h3>국가 선택</h3>
+						<div class="search">
+							<input type="text" placeholder="국가 검색" />
+							<button type="button">SEARCH</button>
+							<button class="reset" type="button">RESET</button>
+						</div>
+					</div>
+					<ul>
+						<li class="on">
+							<input type="checkbox" name="country" id="country_1">
+							<label for="country_1">나이지리아</label>
+						</li>
+						<li>
+							<input type="checkbox" name="country" id="country_2">
+							<label for="country_2">나이지리아</label>
+						</li>
+						<li>
+							<input type="checkbox" name="country" id="country_3">
+							<label for="country_3">나이지리아</label>
+						</li>
+						<li class="on">
+							<input type="checkbox" name="country" id="country_4">
+							<label for="country_4">나이지리아</label>
+						</li>
+						<li>
+							<input type="checkbox" name="country" id="country_5">
+							<label for="country_5">나이지리아</label>
+						</li>
+						<li>
+							<input type="checkbox" name="country" id="country_6">
+							<label for="country_6">나이지리아</label>
+						</li>
+						<li class="on">
+							<input type="checkbox" name="country" id="country_7">
+							<label for="country_7">나이지리아</label>
+						</li>
+						<li class="on">
+							<input type="checkbox" name="country" id="country_8">
+							<label for="country_8">나이지리아</label>
+						</li>
+						<li>
+							<input type="checkbox" name="country" id="country_9">
+							<label for="country_9">나이지리아</label>
+						</li>
+						<li>
+							<input type="checkbox" name="country" id="country_10">
+							<label for="country_10">나이지리아</label>
+						</li>
+						<li>
+							<input type="checkbox" name="country" id="country_11">
+							<label for="country_11">나이지리아</label>
+						</li>
+						<li>
+							<input type="checkbox" name="country" id="country_12">
+							<label for="country_12">나이지리아</label>
+						</li>
+						<li>
+							<input type="checkbox" name="country" id="country_13">
+							<label for="country_13">나이지리아</label>
+						</li>
+					</ul>
+				</div>
+				<div class="table_box">
+					<ul class="th">
+						<li>국가명</li>
+						<li>CC</li>
+						<li>Inbound Traffic</li>
+						<li>Outbound Traffic</li>
+					</ul>
+					<ul class="tr">
+						<li>나이지리아</li>
+						<li>RU</li>
+						<li>2454.51Mb</li>
+						<li>2454.51Mb</li>
+					</ul>
+				</div>
+				<div class="block_btn_box">
+					<button type="button" class="unblock">UNBLOCK</button>
+					<button type="button" class="block">BLOCK</button>
+				</div>
+			</div>
+		</div>
+		<!-- Inbound, Outbound SET 팝업 -->
+		<div class="detail_layer in_out_layer">
+			<div class="box">
+				<div class="title">
+					<h2 class="tit">Inbound 차단 관리</h2>
+					<div class="close"></div>
+				</div>
+				<div class="table_wrap">
+					<div class="top">
+						<div class="group_mbtn">
+							<button type="button" class="unblock">UNBLOCK</button>
+							<button type="button" class="block">BLOCK</button>
+						</div>
+					</div>
+					<table class="table table-grade type2">
+						<thead>
+							<th><input type="checkbox" name="" id=""></th>
+							<th>고객사 IP</th>
+							<th>측정일</th>
+							<th>외부망 IP</th>
+							<th>목적지 Port</th>
+							<th>Inbound 트래픽</th>
+							<th>차단 설정 일시</th>
+							<th>차단 상태</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td><input type="checkbox" name="" id=""></td>
+								<td>128.127.129.1</td>
+								<td>2021.07.29</td>
+								<td>1.1.1.1</td>
+								<td>443</td>
+								<td>195Gb</td>
+								<td>2021.08.11</td>
+								<td>차단</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="" id=""></td>
+								<td>128.127.129.1</td>
+								<td>2021.07.29</td>
+								<td>1.1.1.1</td>
+								<td>443</td>
+								<td>195Gb</td>
+								<td>2021.08.11</td>
+								<td>차단</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="" id=""></td>
+								<td>128.127.129.1</td>
+								<td>2021.07.29</td>
+								<td>1.1.1.1</td>
+								<td>443</td>
+								<td>195Gb</td>
+								<td>2021.08.11</td>
+								<td>차단</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="" id=""></td>
+								<td>128.127.129.1</td>
+								<td>2021.07.29</td>
+								<td>1.1.1.1</td>
+								<td>443</td>
+								<td>195Gb</td>
+								<td>2021.08.11</td>
+								<td>차단</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="" id=""></td>
+								<td>128.127.129.1</td>
+								<td>2021.07.29</td>
+								<td>1.1.1.1</td>
+								<td>443</td>
+								<td>195Gb</td>
+								<td>2021.08.11</td>
+								<td>차단</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="" id=""></td>
+								<td>128.127.129.1</td>
+								<td>2021.07.29</td>
+								<td>1.1.1.1</td>
+								<td>443</td>
+								<td>195Gb</td>
+								<td>2021.08.11</td>
+								<td>차단</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="" id=""></td>
+								<td>128.127.129.1</td>
+								<td>2021.07.29</td>
+								<td>1.1.1.1</td>
+								<td>443</td>
+								<td>195Gb</td>
+								<td>2021.08.11</td>
+								<td>차단</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="" id=""></td>
+								<td>128.127.129.1</td>
+								<td>2021.07.29</td>
+								<td>1.1.1.1</td>
+								<td>443</td>
+								<td>195Gb</td>
+								<td>2021.08.11</td>
+								<td>차단</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="" id=""></td>
+								<td>128.127.129.1</td>
+								<td>2021.07.29</td>
+								<td>1.1.1.1</td>
+								<td>443</td>
+								<td>195Gb</td>
+								<td>2021.08.11</td>
+								<td>차단</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="" id=""></td>
+								<td>128.127.129.1</td>
+								<td>2021.07.29</td>
+								<td>1.1.1.1</td>
+								<td>443</td>
+								<td>195Gb</td>
+								<td>2021.08.11</td>
+								<td>차단</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="bottom">
+						<select>
+							<option>10개씩 보기</option>
+							<option>30개씩 보기</option>
+							<option>50개씩 보기</option>
+						</select>
+						<ul class="paging">
+							<li class="arr first"><<</li>
+							<li class="arr prev"><</li>
+							<li class="active">1</li>
+							<li>2</li>
+							<li>3</li>
+							<li>4</li>
+							<li>5</li>
+							<li class="arr right">></li>
+							<li class="arr last">>></li>
+						</ul>
+						<button class="export" type="button">EXPORT</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 그룹 현황 팝업 -->
+		<div class="detail_layer gm_detail_layer">
+			<div class="box">
+				<div class="title">
+					<h2 class="group_title">그룹 현황</h2>
+					<div class="close cancel"></div>
+				</div>
+				<div class="input_box">
+					<label>그룹명</label>
+					<select>
+						<option>그룹1</option>
+						<option>그룹2</option>
+						<option>그룹3</option>
+					</select>
+				</div>
+				<div class="table_wrap gpm">
+					<h3>IP<a href="./sub_02_2.html" class="setting_link">+ 보안 설정 바로가기</a></h3>
+					<table class="table table-grade type2">
+						<thead>
+							<tr>
+								<th><input type="checkbox" name="gm_chk" class="all_check"></th>
+								<th><input type="checkbox" name="gm_chk"  class="col_check"></th>
+								<th><input type="checkbox" name="gm_chk"  class="col_check"></th>
+								<th><input type="checkbox" name="gm_chk"  class="col_check"></th>
+								<th><input type="checkbox" name="gm_chk"  class="col_check"></th>
+								<th><input type="checkbox" name="gm_chk"  class="col_check"></th>
+								<th><input type="checkbox" name="gm_chk"  class="col_check"></th>
+								<th><input type="checkbox" name="gm_chk"  class="col_check"></th>
+								<th><input type="checkbox" name="gm_chk"  class="col_check"></th>
+								<th><input type="checkbox" name="gm_chk"  class="col_check"></th>
+								<th><input type="checkbox" name="gm_chk"  class="col_check"></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><input type="checkbox" name="gm_chk"  class="row_check"></td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="gm_chk"  class="row_check"></td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="gm_chk"  class="row_check"></td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="gm_chk"  class="row_check"></td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="gm_chk"  class="row_check"></td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="bottom">
+						<div class="group_apply">적용된 보안 설정 | <span> 봇넷통신, C&C통신, RDP 통신</span></div>
+						<div class="btn_box">
+							<button type="button" class="cancel">CANCEL</button>
+							<button type="button" class="creation">CREATION</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="./assets/lib/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" ></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="./assets/js/common.js?2110260127"></script>
+	<script src="./assets/js/sub.js?2110260127"></script>
+</body>
+</html>

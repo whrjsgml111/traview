@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="./assets/css/style.css?2110260127" />
+<title>TRAVIEW</title>
+</head>
+<body>
+	<div class="wrap">
+		<!-- header -->
+		<div class="header">
+			<div class="logo">
+				<img src="./assets/images/traview.png" alt="logo">
+			</div>
+			<!-- SAFE -->
+			<!-- <div class="login_box safe">
+				<div class="status">SAFE</div>
+				<p>현재 홍길동 고객님의 네트워크는 <span>안전</span>하게 보호되고 있습니다.</p>
+				<div class="my_icon"></div>
+			</div> -->
+			<!-- NOTICE -->
+			<div class="login_box notice">
+				<div class="status">Notice</div>
+				<p>현재 홍길동 고객님의 네트워크는 <span>주의</span>가 필요한 상태입니다.</p>
+				<div class="my_icon"></div>
+			</div>
+			<!-- DANGER -->
+			<!-- <div class="login_box danger">
+				<div class="status">Danger</div>
+				<p>현재 홍길동 고객님의 네트워크는 <span>위협</span>으로부터 <span>취약</span>한 상태입니다.</p>
+				<div class="my_icon"></div>
+			</div> -->
+		</div>
+		<!-- left menu -->
+		<div class="left_menu">
+			<div class="menu_icon"></div>
+			<ul>
+				<li class="dashboard">
+					<a href="./main.html">
+						<div class="icon"></div>
+						<span>대시보드</span>
+					</a>
+				</li>
+				<li class="security on">
+					<a href="./sub_01.html">
+						<div class="icon"></div>
+						<span>보안 위협 탐지</span>
+					</a>
+				</li>
+				<li class="network sub">
+					<a href="javascript:;">
+						<div class="icon"></div>
+						<span>Network 운영 현황</span>
+					</a>
+					<div class="child_box">
+						<a href="./sub_02.html" class="sub_title">- Network 운영 현황</a>
+						<a href="./sub_02_1.html" class="sub_title">- 그룹 관리</a>
+						<a href="./sub_02_2.html" class="sub_title">- 보안 설정</a>
+					</div>
+				</li>
+				<li class="report">
+					<a href="./sub_03.html">
+						<div class="icon"></div>
+						<span>보고서</span>
+					</a>
+				</li>
+				<li class="setting sub">
+					<a href="javascript:;">
+						<div class="icon"></div>
+						<span>시스템 관리</span>
+					</a>
+					<div class="child_box">
+						<a href="./sub_04.html" class="sub_title">- 계정 관리</a>
+						<a href="./sub_04_1.html" class="sub_title">- 감사 로그</a>
+					</div>
+				</li>
+			</ul>
+			<div class="line"></div>
+		</div>
+		<!-- sub_container -->
+		<div class="sub_container">
+			<div class="title">
+				<h2>보안 위협 탐지</h2>
+				<p>> Security Detection</p>
+			</div>
+			<div class="table_wrap">
+				<div class="toggle toggle_top">
+					<h3>IP별</h3>
+					<div class="toggle_box">
+						<input id="ip_group" type="checkbox" checked/>
+						<label class="toggle-item" for="ip_group"></label>
+					</div>
+					<h3>그룹별</h3>
+				</div>
+				<div class="top">
+					<div class="search">
+						<input type="text" class="search_input" placeholder="IP Search" />
+						<button type="button">SEARCH</button>
+					</div>
+				</div>
+				<div class="summary">
+					<div class="left">
+						전체 <span>22</span>건
+						<b>I</b>
+						조회 <span>12</span>건
+						<b>I</b>
+						탐지된 데이터는 <span>2021.08.01 ~ 2021.08.07</span>까지의 데이터입니다.
+					</div>
+					<div class="right">
+						전체 / <span>제한 건 수</span>
+					</div>
+				</div>
+				<div>
+					<table class="table table-grade ip_table">
+						<thead>
+							<th class="ipgp">사용자 IP</th>
+							<th>봇넷 통신</th>
+							<th>C&C 통신</th>
+							<th>SQL 인젝션</th>
+							<th>SOCK Proxy</th>
+							<th>RDP 통신</th>
+							<th>SSH 통신</th>
+							<th>SMB 통신</th>
+							<th>FTP 통신</th>
+							<th>주기적 통신</th>
+							<th>국가별 차단</th>
+							<th>Inbound</th>
+							<th>Outbound</th>
+						</thead>
+						<tbody>
+							<tr class="layer_scdt_popup">
+								<td>128.127.129.123</td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+							</tr>
+							<tr class="layer_scdt_popup">
+								<td>128.127.129.123</td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+							</tr>
+							<tr class="layer_scdt_popup">
+								<td>128.127.129.123</td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+							</tr>
+							<tr class="layer_scdt_popup">
+								<td>128.127.129.123</td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+							</tr>
+							<tr class="layer_scdt_popup">
+								<td>128.127.129.123</td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+							</tr>
+							<tr class="layer_scdt_popup">
+								<td>128.127.129.123</td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+							</tr>
+							<tr class="layer_scdt_popup">
+								<td>128.127.129.123</td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+							</tr>
+							<tr class="layer_scdt_popup">
+								<td>128.127.129.123</td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+							</tr>
+							<tr class="layer_scdt_popup">
+								<td>128.127.129.123</td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+							</tr>
+							<tr class="layer_scdt_popup">
+								<td>128.127.129.123</td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+								<td>24건 / <span>1건</span></td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="bottom">
+						<select>
+							<option>10개씩 보기</option>
+							<option>30개씩 보기</option>
+							<option>50개씩 보기</option>
+						</select>
+						<ul class="paging">
+							<li class="arr first"><<</li>
+							<li class="arr prev"><</li>
+							<li class="active">1</li>
+							<li>2</li>
+							<li>3</li>
+							<li>4</li>
+							<li>5</li>
+							<li class="arr right">></li>
+							<li class="arr last">>></li>
+						</ul>
+						<button class="export" type="button">EXPORT</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 위협 탐지 상세 팝업 -->
+		<div class="detail_layer sc_detail_layer">
+			<div class="box">
+				<div class="title">
+					<h2>위협 탐지 상세</h2>
+					<div class="close"></div>
+				</div>
+				<ul class="menu" id="detail_pop">
+					<li class="on">봇넷 통신</li>
+					<li>C&C 통신</li>
+					<li>SQL 인젝션</li>
+					<li>SOCK Proxy</li>
+					<li>RDP 통신</li>
+					<li>SSH 통신</li>
+					<li>SMB 통신</li>
+					<li>FTP 통신</li>
+					<li>주기적 통신</li>
+					<li>국가별 차단</li>
+					<li>Inbound</li>
+					<li>Outbound</li>
+				</ul>
+				<div class="line_box line" id="sc_pop_lineC">
+					<div class="refresh">해당 탐지 내역은 일주일 단위로갱신 됩니다.</div>
+					<canvas id="line_chart_popup_1" height="60"></canvas>
+				</div>
+				<div class="line_box line_bar" id="sc_pop_lineBarC">
+					<div class="refresh">
+						<ul class="legend">
+							<li>지속 통신 수</li>
+							<li>New CQ</li>
+						</ul>
+						해당 탐지 내역은 일주일 단위로갱신 됩니다.
+					</div>
+					<canvas id="line_chart_popup_2" height="60"></canvas>
+				</div>
+				<div class="table_wrap">
+					<div class="summary">
+						<div class="left">
+							전체 <span>22</span>건
+							<b>I</b>
+							조회 <span>12</span>건
+						</div>
+						<div class="right">
+							<a href="./sub_02_2.html" class="setting_link">+ 보안 설정 바로가기</a>
+						</div>
+					</div>
+					<table class="table table-grade type2">
+						<thead>
+							<th><input type="checkbox" name="" id=""></th>
+							<th>봇넷</th>
+							<th>고객사 IP</th>
+							<th>통신 탐지 건 수</th>
+							<th>차단 설정 일시</th>
+							<th>차단 설정</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td><input type="checkbox" name="" id=""></td>
+								<td class="first"><span></span>1.1.1.1</td>
+								<td>128.127.129.123       </td>
+								<td>687</td>
+								<td>2021.08.01</td>
+								<td>차단</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="" id=""></td>
+								<td class="first"><span></span>1.1.1.1</td>
+								<td>128.127.129.123       </td>
+								<td>687</td>
+								<td>2021.08.01</td>
+								<td>차단</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="" id=""></td>
+								<td class="first"><span></span>1.1.1.1</td>
+								<td>128.127.129.123       </td>
+								<td>687</td>
+								<td>2021.08.01</td>
+								<td>차단</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="" id=""></td>
+								<td class="first"><span></span>1.1.1.1</td>
+								<td>128.127.129.123       </td>
+								<td>687</td>
+								<td>2021.08.01</td>
+								<td>차단</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="" id=""></td>
+								<td class="first"><span></span>1.1.1.1</td>
+								<td>128.127.129.123       </td>
+								<td>687</td>
+								<td>2021.08.01</td>
+								<td>차단</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="bottom">
+						<ul class="paging">
+							<li class="arr first"><<</li>
+							<li class="arr prev"><</li>
+							<li class="active">1</li>
+							<li>2</li>
+							<li>3</li>
+							<li>4</li>
+							<li>5</li>
+							<li class="arr right">></li>
+							<li class="arr last">>></li>
+						</ul>
+						<button class="export" type="button">EXPORT</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="./assets/lib/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" ></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="./assets/js/common.js?2110260127"></script>
+	<script src="./assets/js/sub.js?2110260127"></script>
+</body>
+</html>

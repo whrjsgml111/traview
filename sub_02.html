@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="./assets/css/style.css?2110260127" />
+<title>TRAVIEW</title>
+</head>
+<body>
+	<div class="wrap">
+		<!-- header -->
+		<div class="header">
+			<div class="logo">
+				<img src="./assets/images/traview.png" alt="logo">
+			</div>
+			<!-- SAFE -->
+			<div class="login_box safe">
+				<div class="status">SAFE</div>
+				<p>현재 홍길동 고객님의 네트워크는 <span>안전</span>하게 보호되고 있습니다.</p>
+				<div class="my_icon"></div>
+			</div>
+			<!-- NOTICE -->
+			<!-- <div class="login_box notice">
+				<div class="status">Notice</div>
+				<p>현재 홍길동 고객님의 네트워크는 <span>주의</span>가 필요한 상태입니다.</p>
+				<div class="my_icon"></div>
+			</div> -->
+			<!-- DANGER -->
+			<!-- <div class="login_box danger">
+				<div class="status">Danger</div>
+				<p>현재 홍길동 고객님의 네트워크는 <span>위협</span>으로부터 <span>취약</span>한 상태입니다.</p>
+				<div class="my_icon"></div>
+			</div> -->
+		</div>
+		<!-- left menu -->
+		<div class="left_menu">
+			<div class="menu_icon"></div>
+			<ul>
+				<li class="dashboard">
+					<a href="./main.html">
+						<div class="icon"></div>
+						<span>대시보드</span>
+					</a>
+				</li>
+				<li class="security">
+					<a href="./sub_01.html">
+						<div class="icon"></div>
+						<span>보안 위협 탐지</span>
+					</a>
+				</li>
+				<li class="network sub on">
+					<a href="javascript:;">
+						<div class="icon"></div>
+						<span>Network 운영 현황</span>
+					</a>
+					<div class="child_box">
+						<a href="./sub_02.html" class="sub_title">- Network 운영 현황</a>
+						<a href="./sub_02_1.html" class="sub_title">- 그룹 관리</a>
+						<a href="./sub_02_2.html" class="sub_title">- 보안 설정</a>
+					</div>
+				</li>
+				<li class="report">
+					<a href="./sub_03.html">
+						<div class="icon"></div>
+						<span>보고서</span>
+					</a>
+				</li>
+				<li class="setting sub">
+					<a href="javascript:;">
+						<div class="icon"></div>
+						<span>시스템 관리</span>
+					</a>
+					<div class="child_box">
+						<a href="./sub_04.html" class="sub_title">- 계정 관리</a>
+						<a href="./sub_04_1.html" class="sub_title">- 감사 로그</a>
+					</div>
+				</li>
+			</ul>
+			<div class="line"></div>
+		</div>
+		<!-- sub_container -->
+		<div class="sub_container">
+			<div class="title">
+				<h2>Network 운영 현황</h2>
+				<p>> Network Operation Status</p>
+			</div>
+			<div class="network_wrap">
+				<div class="contents">
+					<div class="box type_1">
+						<div class="tit">
+							<h3>IP 현황</h3>
+						</div>
+						<div class="ip">
+							<select>
+								<option>1.1.1.0/24(245)</option>
+								<option>1.1.1.0/24(245)</option>
+								<option>1.1.1.0/24(245)</option>
+								<option>1.1.1.0/24(245)</option>
+								<option>1.1.1.0/24(245)</option>
+							</select>
+							<div class="table_scroll">
+								<table class="table table-grade">
+									<tr>
+										<td>128.127.129.123</td>
+										<td>128.127.129.123</td>
+										<td>128.127.129.123</td>
+										<td>128.127.129.123</td>
+										<td>128.127.129.123</td>
+									</tr>
+									<tr>
+										<td>128.127.129.123</td>
+										<td>128.127.129.123</td>
+										<td>128.127.129.123</td>
+										<td>128.127.129.123</td>
+										<td>128.127.129.123</td>
+									</tr>
+									<tr>
+										<td>128.127.129.123</td>
+										<td>128.127.129.123</td>
+										<td>128.127.129.123</td>
+										<td>128.127.129.123</td>
+										<td>128.127.129.123</td>
+									</tr>
+									<tr>
+										<td>128.127.129.123</td>
+										<td>128.127.129.123</td>
+										<td>128.127.129.123</td>
+										<td>128.127.129.123</td>
+										<td>128.127.129.123</td>
+									</tr>
+									<tr>
+										<td>128.127.129.123</td>
+										<td>128.127.129.123</td>
+										<td>128.127.129.123</td>
+										<td>128.127.129.123</td>
+										<td>128.127.129.123</td>
+									</tr>
+									<tr>
+										<td>128.127.129.123</td>
+										<td>128.127.129.123</td>
+										<td>128.127.129.123</td>
+										<td>128.127.129.123</td>
+										<td>128.127.129.123</td>
+									</tr>
+									<tr>
+										<td>128.127.129.123</td>
+										<td>128.127.129.123</td>
+										<td>128.127.129.123</td>
+										<td>128.127.129.123</td>
+										<td>128.127.129.123</td>
+									</tr>
+									<tr>
+										<td>128.127.129.123</td>
+										<td>128.127.129.123</td>
+										<td>128.127.129.123</td>
+										<td>128.127.129.123</td>
+										<td>128.127.129.123</td>
+									</tr>
+									<tr>
+										<td>128.127.129.123</td>
+										<td>128.127.129.123</td>
+										<td>128.127.129.123</td>
+										<td>128.127.129.123</td>
+										<td>128.127.129.123</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="box type_1">
+						<div class="tit">
+							<h3>네트워크 대역 분포</h3>
+							<p class="network_band_btn">+자세히보기</p>
+						</div>
+						<div class="donut_box">
+							<div class="chart_box">
+								<canvas id="canvas_sub_1" width="220" height="220"></canvas>
+								<div class="percent" id="donutPer_sub_1">
+									<div class="cate">
+										네트워크 대역 : <div class="cate_value">218</div>
+									</div>
+									<div class="per_value">
+										1618
+									</div>
+								</div>
+							</div>
+							<table class="chart_label_1">
+								<tr>
+									<th>네트워크 대역</th>
+									<th>분포도</th>
+								</tr>
+								<tbody>
+									<tr>
+										<td><div><span></span>218대역</div></td>
+										<td>1618</td>
+									</tr>
+									<tr>
+										<td><div><span></span>219대역</div></td>
+										<td>1325</td>
+									</tr>
+									<tr>
+										<td><div><span></span>175대역</div></td>
+										<td>965</td>
+									</tr>
+									<tr>
+										<td><div><span></span>58대역</div></td>
+										<td>645</td>
+									</tr>
+									<tr>
+										<td><div><span></span>222대역</div></td>
+										<td>222</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="box type_1">
+						<div class="tit">
+							<h3>활성 포트 현황</h3>
+							<p class="active_port_btn">+자세히보기</p>
+						</div>
+						<div class="donut_box">
+							<div class="chart_box">
+								<canvas id="canvas_sub_2" width="220" height="220"></canvas>
+								<div class="percent" id="donutPer_sub_2">
+									<div class="cate">
+										활성 포트 : <div class="cate_value">789</div>
+									</div>
+									<div class="per_value">
+										789
+									</div>
+								</div>
+							</div>
+							<table class="chart_label_2">
+								<tr>
+									<th>활성포트</th>
+									<th>접속수</th>
+								</tr>
+								<tbody>
+									<tr>
+										<td><div><span></span>52</div></td>
+										<td>789</td>
+									</tr>
+									<tr>
+										<td><div><span></span>80</div></td>
+										<td>723</td>
+									</tr>
+									<tr>
+										<td><div><span></span>8080</div></td>
+										<td>662</td>
+									</tr>
+									<tr>
+										<td><div><span></span>3389</div></td>
+										<td>452</td>
+									</tr>
+									<tr>
+										<td><div><span></span>22</div></td>
+										<td>211</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="contents">
+					<div class="box type_2">
+						<div class="tit">
+							<h3>OS 접속 현황</h3>
+							<p class="os_access_btn">+자세히보기</p>
+						</div>
+						<div class="bar_box">
+							<canvas id="bar_chart_custom1" height="100"></canvas>
+							<table class="barchart_table">
+								<tr>
+									<th>Windows 10</th>
+									<th>Windows 7</th>
+									<th>Windows XP</th>
+									<th>Windows 8</th>
+									<th>Linux</th>
+									<th>Android</th>
+									<th>Windows 2000</th>
+									<th>iPhone</th>
+									<th>Windows Vista</th>
+									<th>iPad</th>
+									<th>Mac OS 10.1</th>
+								</tr>
+								<tr>
+									<td>144</td>
+									<td>125</td>
+									<td>108</td>
+									<td>76</td>
+									<td>55</td>
+									<td>42</td>
+									<td>40</td>
+									<td>35</td>
+									<td>24</td>
+									<td>20</td>
+									<td>8</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="box type_2">
+						<div class="tit">
+							<h3>APP 접속 현황</h3>
+							<p class="app_access_btn">+자세히보기</p>
+						</div>
+						<div class="bar_box">
+							<canvas id="bar_chart_custom2" height="100"></canvas>
+							<table class="barchart_table">
+								<tr>
+									<th>Https</th>
+									<th>Http</th>
+									<th>DNS</th>
+									<th>POP3</th>
+									<th>FTP</th>
+									<th>BitTorrent</th>
+									<th>Proxy</th>
+									<th>IMAP</th>
+									<th>RDP</th>
+									<th>SNMP</th>
+									<th>SMB</th>
+								</tr>
+								<tr>
+									<td>712</td>
+									<td>687</td>
+									<td>520</td>
+									<td>386</td>
+									<td>268</td>
+									<td>224</td>
+									<td>198</td>
+									<td>175</td>
+									<td>126</td>
+									<td>98</td>
+									<td>22</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="contents">
+					<div class="box type_3 table_wrap">
+						<div class="tit">
+							<h3>웹 통신 현황</h3>
+						</div>
+						<div class="top">
+							<div class="search">
+								<input type="text" placeholder="IP Search" />
+								<button type="button">SEARCH</button>
+								<button type="button" class="reset">RESET</button>
+							</div>
+						</div>
+						<div class="line_box">
+							<canvas id="line_chart_custom1" height="60"></canvas>
+						</div>
+						<div class="table_margin">
+							<table class="table table-grade type2">
+								<thead>
+									<th>IP</th>
+									<th>01시</th>
+									<th>02시</th>
+									<th>03시</th>
+									<th>04시</th>
+									<th>05시</th>
+									<th>06시</th>
+									<th>07시</th>
+									<th>08시</th>
+									<th>09시</th>
+									<th>10시</th>
+									<th>11시</th>
+									<th>12시</th>
+									<th>13시</th>
+									<th>14시</th>
+									<th>15시</th>
+									<th>16시</th>
+									<th>17시</th>
+									<th>18시</th>
+									<th>19시</th>
+									<th>20시</th>
+									<th>21시</th>
+									<th>22시</th>
+									<th>23시</th>
+									<th>24시</th>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="first">
+											<span></span>
+											1.1.1.1
+										</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+									</tr>
+									<tr>
+										<td class="first">
+											<span></span>
+											2.2.2.2
+										</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+									</tr>
+									<tr>
+										<td class="first">
+											<span></span>
+											3.3.3.3
+										</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+									</tr>
+									<tr>
+										<td class="first">
+											<span></span>
+											4.4.4.4
+										</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+									</tr>
+									<tr>
+										<td class="first">
+											<span></span>
+											5.5.5.5
+										</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+										<td>123</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="bottom">
+								<ul class="paging">
+									<li class="arr first"><<</li>
+									<li class="arr prev"><</li>
+									<li class="active">1</li>
+									<li>2</li>
+									<li>3</li>
+									<li>4</li>
+									<li>5</li>
+									<li class="arr right">></li>
+									<li class="arr last">>></li>
+								</ul>
+								<button class="export" type="button">EXPORT</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- OS 접속 현황 팝업 -->
+		<div class="detail_layer os_access_layer" id="osAccessPop">
+			<div class="box">
+				<div class="title">
+					<h2>OS 접속 현황</h2>
+					<div class="close"></div>
+				</div>
+				<div class="chart_box">
+					<canvas id="bar_chart_popup_1" height="45"></canvas>
+					<table class="barchart_table popup">
+						<tr>
+							<td>Windows 10</td>
+							<td>Windows 7</td>
+							<td>Windows XP</td>
+							<td>Windows 8</td>
+							<td>Linux</td>
+							<td>Android</td>
+							<td>Windows 2000</td>
+							<td>iPhone</td>
+							<td>Windows Vista</td>
+							<td>iPad</td>
+							<td>Mac OS 10.1</td>
+						</tr>
+					</table>
+				</div>
+				<div class="bg_wrap">
+					<h3>OS별 상세보기 > <b>Window10</b></h3>
+					<div class="table_wrap">
+						<table class="table table-grade access_pop">
+							<thead>
+								<th>Date</th>
+								<th>Host IP Addr</th>
+							</thead>
+							<tbody>
+								<tr>
+									<td>2021.05.01</td>
+									<td>128.127.129.123</td>
+								</tr>
+								<tr>
+									<td>2021.05.01</td>
+									<td>128.127.129.123</td>
+								</tr>
+								<tr>
+									<td>2021.05.01</td>
+									<td>128.127.129.123</td>
+								</tr>
+								<tr>
+									<td>2021.05.01</td>
+									<td>128.127.129.123</td>
+								</tr>
+								<tr>
+									<td>2021.05.01</td>
+									<td>128.127.129.123</td>
+								</tr>
+								<tr>
+									<td>2021.05.01</td>
+									<td>128.127.129.123</td>
+								</tr>
+								<tr>
+									<td>2021.05.01</td>
+									<td>128.127.129.123</td>
+								</tr>
+								<tr>
+									<td>2021.05.01</td>
+									<td>128.127.129.123</td>
+								</tr>
+								<tr>
+									<td>2021.05.01</td>
+									<td>128.127.129.123</td>
+								</tr>
+								<tr>
+									<td>2021.05.01</td>
+									<td>128.127.129.123</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<button type="button" class="more">+ more</button>
+				</div>
+			</div>
+		</div>
+		<!-- APP 접속 현황 팝업 -->
+		<div class="detail_layer os_access_layer" id="appAccessPop">
+			<div class="box">
+				<div class="title">
+					<h2>APP 접속 현황</h2>
+					<div class="close"></div>
+				</div>
+				<div class="chart_box">
+					<canvas id="bar_chart_popup_2" height="45"></canvas>
+					<table class="barchart_table popup">
+						<tr>
+							<td>Https</td>
+							<td>Http</td>
+							<td>DNS</td>
+							<td>POP3</td>
+							<td>FTP</td>
+							<td>BitTorrent</td>
+							<td>Proxy</td>
+							<td>IMAP</td>
+							<td>RDP</td>
+							<td>SNMP</td>
+							<td>SMB</td>
+						</tr>
+					</table>
+				</div>
+				<div class="bg_wrap">
+					<h3>OS별 상세보기 > <b>Window10</b></h3>
+					<div class="table_wrap">
+						<table class="table table-grade access_pop">
+							<thead>
+								<th>Date</th>
+								<th>Host IP Addr</th>
+							</thead>
+							<tbody>
+								<tr>
+									<td>2021.05.01</td>
+									<td>128.127.129.123</td>
+								</tr>
+								<tr>
+									<td>2021.05.01</td>
+									<td>128.127.129.123</td>
+								</tr>
+								<tr>
+									<td>2021.05.01</td>
+									<td>128.127.129.123</td>
+								</tr>
+								<tr>
+									<td>2021.05.01</td>
+									<td>128.127.129.123</td>
+								</tr>
+								<tr>
+									<td>2021.05.01</td>
+									<td>128.127.129.123</td>
+								</tr>
+								<tr>
+									<td>2021.05.01</td>
+									<td>128.127.129.123</td>
+								</tr>
+								<tr>
+									<td>2021.05.01</td>
+									<td>128.127.129.123</td>
+								</tr>
+								<tr>
+									<td>2021.05.01</td>
+									<td>128.127.129.123</td>
+								</tr>
+								<tr>
+									<td>2021.05.01</td>
+									<td>128.127.129.123</td>
+								</tr>
+								<tr>
+									<td>2021.05.01</td>
+									<td>128.127.129.123</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<button type="button" class="more">+ more</button>
+				</div>
+			</div>
+		</div>
+		<!-- 네트워크 대역 분포 - 팝업 -->
+		<div class="detail_layer network_port_layer" id="networkBandLayer">
+			<div class="box">
+				<div class="title">
+					<h2>Network 대역 분포</h2>
+					<div class="close"></div>
+				</div>
+				<div class="chart_box">
+					<div class="left">
+						<div class="donut_box">
+							<canvas id="canvas_sub_3" width="220" height="220"></canvas>
+							<div class="percent" id="donutPer_sub_3">
+								<div class="cate">
+									네트워크 대역 : <div class="cate_value">218</div>
+								</div>
+								<div class="per_value">
+									1618
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="right">
+						<div class="table_wrap">
+							<table class="table table-grade chart_label_3">
+								<thead>
+									<th>순위</th>
+									<th>네트워크 대역</th>
+									<th>분포도</th>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td><div class="align"><span class="color"></span>218대역</div></td>
+										<td>1618</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td><div class="align"><span class="color"></span>219대역</div></td>
+										<td>1325</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td><div class="align"><span class="color"></span>175대역</div></td>
+										<td>965</td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td><div class="align"><span class="color"></span>158대역</div></td>
+										<td>645</td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td><div class="align"><span class="color"></span>111대역</div></td>
+										<td>532</td>
+									</tr>
+									<tr>
+										<td>6</td>
+										<td><div class="align"><span class="color"></span>222대역</div></td>
+										<td>411</td>
+									</tr>
+									<tr>
+										<td>7</td>
+										<td><div class="align"><span class="color"></span>333대역</div></td>
+										<td>398</td>
+									</tr>
+									<tr>
+										<td>8</td>
+										<td><div class="align"><span class="color"></span>444대역</div></td>
+										<td>384</td>
+									</tr>
+									<tr>
+										<td>9</td>
+										<td><div class="align"><span class="color"></span>555대역</div></td>
+										<td>277</td>
+									</tr>
+									<tr>
+										<td>10</td>
+										<td><div class="align"><span class="color"></span>666대역</div></td>
+										<td>225</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="bg_wrap">
+					<h3>대역별 상세보기 > <b>218대역</b></h3>
+					<div class="horizontalBar">
+						<canvas id="hrzBar_1" height="100"></canvas>
+					</div>
+					<button type="button" class="more">+ more</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- 활성 포트 현황 - 팝업 -->
+		<div class="detail_layer network_port_layer" id="activePortLayer">
+			<div class="box">
+				<div class="title">
+					<h2>활성 포트 현황</h2>
+					<div class="close"></div>
+				</div>
+				<div class="chart_box">
+					<div class="left">
+						<div class="donut_box">
+							<canvas id="canvas_sub_4" width="220" height="220"></canvas>
+							<div class="percent" id="donutPer_sub_4">
+								<div class="cate">
+									활성 포트 : <div class="cate_value">52</div>
+								</div>
+								<div class="per_value">
+									789
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="right">
+						<div class="table_wrap">
+							<table class="table table-grade chart_label_4">
+								<thead>
+									<th>순위</th>
+									<th>활성 포트</th>
+									<th>접속수</th>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td><div class="align"><span class="color"></span>53</div></td>
+										<td>1618</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td><div class="align"><span class="color"></span>80</div></td>
+										<td>1325</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td><div class="align"><span class="color"></span>8080</div></td>
+										<td>965</td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td><div class="align"><span class="color"></span>3389</div></td>
+										<td>645</td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td><div class="align"><span class="color"></span>22</div></td>
+										<td>532</td>
+									</tr>
+									<tr>
+										<td>6</td>
+										<td><div class="align"><span class="color"></span>137</div></td>
+										<td>411</td>
+									</tr>
+									<tr>
+										<td>7</td>
+										<td><div class="align"><span class="color"></span>23</div></td>
+										<td>398</td>
+									</tr>
+									<tr>
+										<td>8</td>
+										<td><div class="align"><span class="color"></span>1222</div></td>
+										<td>384</td>
+									</tr>
+									<tr>
+										<td>9</td>
+										<td><div class="align"><span class="color"></span>443</div></td>
+										<td>277</td>
+									</tr>
+									<tr>
+										<td>10</td>
+										<td><div class="align"><span class="color"></span>8888</div></td>
+										<td>225</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="bg_wrap">
+					<h3>대역별 상세보기 > <b>218대역</b></h3>
+					<div class="horizontalBar">
+						<canvas id="hrzBar_2" height="100"></canvas>
+					</div>
+					<button type="button" class="more">+ more</button>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<script src="./assets/lib/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" ></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="./assets/js/common.js?2110260127"></script>
+	<script src="./assets/js/sub.js?2110260127"></script>
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="./assets/css/style.css?2110260127" />
+<title>TRAVIEW</title>
+</head>
+<body>
+	<div class="wrap">
+		<!-- header -->
+		<div class="header">
+			<div class="logo">
+				<img src="./assets/images/traview.png" alt="logo">
+			</div>
+			<!-- SAFE -->
+			<!-- <div class="login_box safe">
+				<div class="status">SAFE</div>
+				<p>현재 홍길동 고객님의 네트워크는 <span>안전</span>하게 보호되고 있습니다.</p>
+				<div class="my_icon"></div>
+			</div> -->
+			<!-- NOTICE -->
+			<!-- <div class="login_box notice">
+				<div class="status">Notice</div>
+				<p>현재 홍길동 고객님의 네트워크는 <span>주의</span>가 필요한 상태입니다.</p>
+				<div class="my_icon"></div>
+			</div> -->
+			<!-- DANGER -->
+			<div class="login_box danger">
+				<div class="status">Danger</div>
+				<p>현재 홍길동 고객님의 네트워크는 <span>위협</span>으로부터 <span>취약</span>한 상태입니다.</p>
+				<div class="my_icon"></div>
+			</div>
+		</div>
+		<!-- left menu -->
+		<div class="left_menu">
+			<div class="menu_icon"></div>
+			<ul>
+				<li class="dashboard">
+					<a href="./main.html">
+						<div class="icon"></div>
+						<span>대시보드</span>
+					</a>
+				</li>
+				<li class="security">
+					<a href="./sub_01.html">
+						<div class="icon"></div>
+						<span>보안 위협 탐지</span>
+					</a>
+				</li>
+				<li class="network sub on">
+					<a href="javascript:;">
+						<div class="icon"></div>
+						<span>Network 운영 현황</span>
+					</a>
+					<div class="child_box">
+						<a href="./sub_02.html" class="sub_title">- Network 운영 현황</a>
+						<a href="./sub_02_1.html" class="sub_title">- 그룹 관리</a>
+						<a href="./sub_02_2.html" class="sub_title">- 보안 설정</a>
+					</div>
+				</li>
+				<li class="report">
+					<a href="./sub_03.html">
+						<div class="icon"></div>
+						<span>보고서</span>
+					</a>
+				</li>
+				<li class="setting sub">
+					<a href="javascript:;">
+						<div class="icon"></div>
+						<span>시스템 관리</span>
+					</a>
+					<div class="child_box">
+						<a href="./sub_04.html" class="sub_title">- 계정 관리</a>
+						<a href="./sub_04_1.html" class="sub_title">- 감사 로그</a>
+					</div>
+				</li>
+			</ul>
+			<div class="line"></div>
+		</div>
+		<!-- sub_container -->
+		<div class="sub_container">
+			<div class="title">
+				<h2>그룹관리</h2>
+				<p>> Network Operation Status > Management</p>
+			</div>
+			<div class="table_wrap group_manage">
+				<div class="top">
+					<div class="group_mbtn">
+						<button type="button" class="delete">DELETE</button>
+						<button type="button" class="register">REGISTER</button>
+					</div>
+				</div>
+				<div>
+					<table class="table table-grade">
+						<thead>
+							<th><input type="checkbox"></th>
+							<th>그룹명</th>
+							<th>그룹 IP 개수</th>
+							<th>보안 설정 수</th>
+							<th>그룹 등록일</th>
+							<th>관리자 ID</th>
+						</thead>
+						<tbody>
+							<tr class="layer_group_popup">
+								<td><input type="checkbox"></td>
+								<td>경영관리팀</td>
+								<td>12개</td>
+								<td>All</td>
+								<td>2021.08.01</td>
+								<td>planty-admin</td>
+							</tr>
+							<tr class="layer_group_popup">
+								<td><input type="checkbox"></td>
+								<td>경영관리팀</td>
+								<td>12개</td>
+								<td>All</td>
+								<td>2021.08.01</td>
+								<td>planty-admin</td>
+							</tr>
+							<tr class="layer_group_popup">
+								<td><input type="checkbox"></td>
+								<td>경영관리팀</td>
+								<td>12개</td>
+								<td>All</td>
+								<td>2021.08.01</td>
+								<td>planty-admin</td>
+							</tr>
+							<tr class="layer_group_popup">
+								<td><input type="checkbox"></td>
+								<td>경영관리팀</td>
+								<td>12개</td>
+								<td>All</td>
+								<td>2021.08.01</td>
+								<td>planty-admin</td>
+							</tr>
+							<tr class="layer_group_popup">
+								<td><input type="checkbox"></td>
+								<td>경영관리팀</td>
+								<td>12개</td>
+								<td>All</td>
+								<td>2021.08.01</td>
+								<td>planty-admin</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="bottom">
+						<ul class="paging">
+							<li class="arr first"><<</li>
+							<li class="arr prev"><</li>
+							<li class="active">1</li>
+							<li>2</li>
+							<li>3</li>
+							<li>4</li>
+							<li>5</li>
+							<li class="arr right">></li>
+							<li class="arr last">>></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 그룹 관리 상세 팝업 -->
+		<div class="detail_layer gm_detail_layer">
+			<div class="box">
+				<div class="title">
+					<h2 class="group_title">그룹 현황</h2>
+					<div class="close cancel"></div>
+				</div>
+				<div class="input_box">
+					<label>그룹명</label>
+					<select>
+						<option>그룹1</option>
+						<option>그룹2</option>
+						<option>그룹3</option>
+					</select>
+					<!-- <input type="text" placeholder="그룹명을 입력해 주세요."> -->
+				</div>
+				<div class="table_wrap gpm">
+					<h3>IP<a href="./sub_02_2.html" class="setting_link">+ 보안 설정 바로가기</a></h3>
+					<table class="table table-grade type2">
+						<thead>
+							<tr>
+								<th><input type="checkbox" name="gm_chk" class="all_check"></th>
+								<th><input type="checkbox" name="gm_chk"  class="col_check"></th>
+								<th><input type="checkbox" name="gm_chk"  class="col_check"></th>
+								<th><input type="checkbox" name="gm_chk"  class="col_check"></th>
+								<th><input type="checkbox" name="gm_chk"  class="col_check"></th>
+								<th><input type="checkbox" name="gm_chk"  class="col_check"></th>
+								<th><input type="checkbox" name="gm_chk"  class="col_check"></th>
+								<th><input type="checkbox" name="gm_chk"  class="col_check"></th>
+								<th><input type="checkbox" name="gm_chk"  class="col_check"></th>
+								<th><input type="checkbox" name="gm_chk"  class="col_check"></th>
+								<th><input type="checkbox" name="gm_chk"  class="col_check"></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><input type="checkbox" name="gm_chk"  class="row_check"></td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="gm_chk"  class="row_check"></td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="gm_chk"  class="row_check"></td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="gm_chk"  class="row_check"></td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="gm_chk"  class="row_check"></td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+								<td>128.127.129.123</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="bottom">
+						<div class="group_apply">적용된 보안 설정 | <span> 봇넷통신, C&C통신, RDP 통신</span></div>
+						<div class="btn_box">
+							<button type="button" class="cancel">CANCEL</button>
+							<button type="button" class="creation">CREATION</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="./assets/lib/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" ></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="./assets/js/common.js?2110260127"></script>
+	<script src="./assets/js/sub.js?2110260127"></script>
+</body>
+</html>
